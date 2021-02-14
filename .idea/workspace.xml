@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bca9e157-b306-4ff4-80af-56565a0ff594" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/AdminLTE/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mCoxeLseJyIUuW9PwkOCtoUbrC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/src/Service" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\phpAlif\shop\common\src\Service" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\fixture_pics" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\views" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Controller" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\views\category" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\phpAlif\shop\frontend" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Fixtures" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\src" />
+      <recent name="C:\laragon\www\phpAlif\shop\uploads\products" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bca9e157-b306-4ff4-80af-56565a0ff594" name="Default Changelist" comment="" />
+      <created>1609007182291</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609007182291</updated>
+      <workItem from="1609007188289" duration="5485000" />
+      <workItem from="1609146137559" duration="27000" />
+      <workItem from="1610038263929" duration="14378000" />
+      <workItem from="1610085369428" duration="1933000" />
+      <workItem from="1610123890741" duration="11159000" />
+      <workItem from="1610169774252" duration="12066000" />
+      <workItem from="1610186915854" duration="25000" />
+      <workItem from="1610187070639" duration="41000" />
+      <workItem from="1611381942045" duration="20393000" />
+      <workItem from="1611491359891" duration="9000" />
+      <workItem from="1612592655037" duration="9226000" />
+      <workItem from="1612716411716" duration="9136000" />
+      <workItem from="1612808867169" duration="4465000" />
+      <workItem from="1612893748811" duration="6950000" />
+      <workItem from="1612931431227" duration="9000" />
+      <workItem from="1612938155793" duration="764000" />
+      <workItem from="1613228684419" duration="10750000" />
+      <workItem from="1613315922555" duration="9570000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611406555727">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1611406555727" />
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613323303764">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613323303764" />
+    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1610047034541">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610047034541" />
+    <state x="526" y="195" key="FileChooserDialogImpl" timestamp="1613238231446">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="526" y="195" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613238231446" />
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1609146163246" />
+    <state x="427" y="179" key="NewPhpClassDialog" timestamp="1613323289935">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="427" y="179" key="NewPhpClassDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613323289935" />
+    <state x="499" y="290" key="NewPhpFileDialog" timestamp="1613238037185">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="499" y="290" key="NewPhpFileDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613238037185" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1610041197574">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610041197574" />
+    <state x="1408" y="-13" width="1339" height="717" maximized="true" key="dock-window-1" timestamp="1610182352076">
+      <screen x="1366" y="0" width="1360" height="738" />
+    </state>
+    <state x="1408" y="-13" width="1339" height="717" maximized="true" key="dock-window-1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610182352076" />
+    <state x="360" y="103" width="646" height="532" key="find.popup" timestamp="1613315955042">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="360" y="103" width="646" height="532" key="find.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613315955042" />
+    <state x="324" y="95" width="700" height="530" key="recent.locations.popup" timestamp="1609010266320">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="324" y="95" width="700" height="530" key="recent.locations.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1609010266320" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1612894827309">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1612894827309" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1610171486359">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610171486359" />
+  </component>
+</project>

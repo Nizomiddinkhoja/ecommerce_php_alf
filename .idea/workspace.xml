@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bca9e157-b306-4ff4-80af-56565a0ff594" name="Default Changelist" comment="" />
+    <list default="true" id="bca9e157-b306-4ff4-80af-56565a0ff594" name="Default Changelist" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/common/src/Service/BasketCookieService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Service/SecurityService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Controller/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/site/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/SiteController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,21 +37,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/src/Service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/Controller" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\phpAlif\shop\common\src\Service" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\fixture_pics" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\views" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Controller" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\views\category" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\phpAlif\shop\frontend" />
       <recent name="C:\laragon\www\phpAlif\shop\backend\src\Fixtures" />
       <recent name="C:\laragon\www\phpAlif\shop\backend\src" />
       <recent name="C:\laragon\www\phpAlif\shop\uploads\products" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\phpAlif\shop\frontend\src\Controller" />
+      <recent name="C:\laragon\www\phpAlif\shop\common\src\Service" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\fixture_pics" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\views" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Controller" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -83,22 +93,42 @@
       <workItem from="1612931431227" duration="9000" />
       <workItem from="1612938155793" duration="764000" />
       <workItem from="1613228684419" duration="10750000" />
-      <workItem from="1613315922555" duration="9570000" />
+      <workItem from="1613315922555" duration="9953000" />
+      <workItem from="1613373455812" duration="51000" />
+      <workItem from="1613962438831" duration="4217000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1613326122028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613326122028</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611406555727">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1611406555727" />
-    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613323303764">
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613965128513">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613323303764" />
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613965128513" />
+    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1613965510423">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613965510423" />
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1610047034541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -108,26 +138,30 @@
     </state>
     <state x="526" y="195" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613238231446" />
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1609146163246" />
-    <state x="427" y="179" key="NewPhpClassDialog" timestamp="1613323289935">
+    <state x="427" y="179" key="NewPhpClassDialog" timestamp="1613965469024">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="427" y="179" key="NewPhpClassDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613323289935" />
-    <state x="499" y="290" key="NewPhpFileDialog" timestamp="1613238037185">
+    <state x="427" y="179" key="NewPhpClassDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613965469024" />
+    <state x="499" y="290" key="NewPhpFileDialog" timestamp="1613964767111">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="499" y="290" key="NewPhpFileDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613238037185" />
+    <state x="499" y="290" key="NewPhpFileDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613964767111" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1610041197574">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610041197574" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1613326125359">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613326125359" />
     <state x="1408" y="-13" width="1339" height="717" maximized="true" key="dock-window-1" timestamp="1610182352076">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
     <state x="1408" y="-13" width="1339" height="717" maximized="true" key="dock-window-1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610182352076" />
-    <state x="360" y="103" width="646" height="532" key="find.popup" timestamp="1613315955042">
+    <state x="360" y="103" width="646" height="532" key="find.popup" timestamp="1613966556812">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="360" y="103" width="646" height="532" key="find.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613315955042" />
+    <state x="360" y="103" width="646" height="532" key="find.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613966556812" />
     <state x="324" y="95" width="700" height="530" key="recent.locations.popup" timestamp="1609010266320">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

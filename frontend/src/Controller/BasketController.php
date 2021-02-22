@@ -1,10 +1,9 @@
 <?php
 
-session_start();
-
 include_once __DIR__ . '/../../../common/src/Service/UserService.php';
 include_once __DIR__ . '/../../../common/src/Service/BasketService.php';
 include_once __DIR__ . '/../../../common/src/Service/BasketSessionService.php';
+include_once __DIR__ . '/../../../common/src/Service/BasketCookieService.php';
 include_once __DIR__ . '/../../../common/src/Service/ProductService.php';
 include_once __DIR__ . '/../../../common/src/Model/BasketItems.php';
 include_once __DIR__ . '/../../../common/src/Model/Product.php';
@@ -18,10 +17,17 @@ class BasketController
 
     public function __construct()
     {
-        $this->user =  (new UserService)->getCurrentUser();
+        $this->user = (new UserService)->getCurrentUser();
+
+        if (!isset($this->user['login'])) {
+            throw new Exception('No permissions', 403);
+        }
+
         $this->basket = BasketService::getBasketByUserId($this->user['id']);
 //        $this->basketService = new BasketService();
-        $this->basketService = new BasketSessionService();
+//        $this->basketService = new BasketSessionService();
+        $this->basketService = new BasketCookieService();
+
         $this->items = $this->basketService->getBasketProducts((int)$this->basket['id']);
 
     }

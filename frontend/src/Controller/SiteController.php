@@ -7,7 +7,6 @@ class SiteController
 {
     public function index()
     {
-
         $currentUser = (new UserService)->getCurrentUser();
 
         $all_result = (new Product())->all();

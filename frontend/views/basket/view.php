@@ -55,6 +55,9 @@
             </tr>
             </tbody>
         </table>
+
+        <a href="index.php?model=order&action=index">Create Order</a>
+        
     </div>
 </div>
 

@@ -69,6 +69,6 @@ class BasketItems
 
     public function clearByBasketId($basketId)
     {
-        mysqli_query($this->conn, "DELETE FROM basket_item WHERE basket_id=$basketId limit 1");
+        mysqli_query($this->conn, "DELETE FROM basket_item WHERE basket_id=$basketId");
     }
 }

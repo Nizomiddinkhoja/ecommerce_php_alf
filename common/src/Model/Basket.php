@@ -43,4 +43,10 @@ class Basket
     {
         mysqli_query($this->conn, "DELETE FROM basket WHERE user_id=$userId limit 1");
     }
+
+//    public function deleteByBasketId($userId)
+//    {
+//        mysqli_query($this->conn, "DELETE FROM basket_item WHERE user_id=$userId limit 1");
+//        mysqli_query($this->conn, "DELETE FROM basket WHERE user_id=$userId limit 1");
+//    }
 }

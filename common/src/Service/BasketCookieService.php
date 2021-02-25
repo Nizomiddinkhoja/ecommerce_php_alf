@@ -2,9 +2,9 @@
 
 include_once __DIR__ . '/../Model/Basket.php';
 include_once __DIR__ . '/../Model/BasketItems.php';
-include_once __DIR__ . '/Interfaces/BasketInterface.php';
+include_once __DIR__ . '/../Service/BasketService.php';
 
-class BasketCookieService implements BasketInterface
+class BasketCookieService extends BasketService
 {
     const TIME_EXPIRED = 60 * 60;
 
@@ -63,6 +63,16 @@ class BasketCookieService implements BasketInterface
     public function save($data)
     {
         setcookie('basket', serialize($data), time() + self::TIME_EXPIRED);
+    }
+
+    public function clearBasket($basketId)
+    {
+        // TODO: Implement clearBasket() method.
+    }
+
+    public function getBasketIdByUserId($userId)
+    {
+        // TODO: Implement getBasketIdByUserId() method.
     }
 
 }

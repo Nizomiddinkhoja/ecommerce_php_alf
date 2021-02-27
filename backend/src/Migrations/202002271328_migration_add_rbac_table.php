@@ -20,7 +20,7 @@ class MigrationAddRbacTable
                  `id` int(11) NOT NULL AUTO_INCREMENT,
                  `role` varchar(256) NOT NULL,
                  PRIMARY KEY (`id`)
-            ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8");
+            ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8");
         if (!$result) {
             print mysqli_error($this->conn) . PHP_EOL;
         }
@@ -30,7 +30,7 @@ class MigrationAddRbacTable
                  `id` int(11) NOT NULL AUTO_INCREMENT,
                  `permission` varchar(256) NOT NULL UNIQUE,
                  PRIMARY KEY (`id`)
-            ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8");
+            ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8");
         if (!$result) {
             print mysqli_error($this->conn) . PHP_EOL;
         }
@@ -42,7 +42,7 @@ class MigrationAddRbacTable
                  `role` varchar(256) NOT NULL,
                  `permission` varchar(256) NOT NULL,
                  PRIMARY KEY (`id`)
-            ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8");
+            ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8");
         if (!$result) {
             print mysqli_error($this->conn) . PHP_EOL;
         }

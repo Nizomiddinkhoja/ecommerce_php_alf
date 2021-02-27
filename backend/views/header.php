@@ -169,6 +169,84 @@ include_once __DIR__ . "/../../common/src/Service/SecurityService.php";
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="http://phpalif.test/shop/backend/index.php?model=news&action=read"
+                               class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Access
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="?model=access&action=create"
+                                       class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create access</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="?model=access&action=read"
+                                       class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>List access</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?model=delivery&action=read"
+                               class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Delivery
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="?model=delivery&action=create"
+                                       class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create delivery</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="?model=delivery&action=read"
+                                       class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>List delivery</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?model=payment&action=read"
+                               class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Payment
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="?model=payment&action=create"
+                                       class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create payment</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="?model=payment&action=read"
+                                       class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>List payment</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

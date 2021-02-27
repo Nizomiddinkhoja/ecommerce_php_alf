@@ -17,7 +17,7 @@ class BasketController
 
     public function __construct()
     {
-        $this->user = (new UserService)->getCurrentUser();
+        $this->user = UserService::getCurrentUser();
 
         if (!isset($this->user['login'])) {
             throw new Exception('No permissions', 403);

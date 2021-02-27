@@ -3,6 +3,12 @@
 
 class SecurityService
 {
+    /**
+     * @param $user
+     * @param $password
+     * @return bool
+     * @throws Exception
+     */
     public function checkPassword($user, $password)
     {
 
@@ -18,16 +24,28 @@ class SecurityService
     }
 
 
-    public function redirectToStartPage()
+    public static function redirectToStartPage()
     {
-        header('location: /shop/frontend/index.php');
+        header('location: ?/');
         die();
     }
 
 
-    public function redirectToLoginPage()
+    public static function redirectToLoginPage()
     {
-        header('location: /shop/frontend/index.php?model=site&action=login');
+        header('location: ?model=site&action=login');
         die();
+    }
+
+    public static function isAuthorized()
+    {
+        if (empty(UserService::getCurrentUser())) return false;
+
+        return true;
+    }
+
+    public static function getPermissionNameByControllerAndAction($controller, $action)
+    {
+        return strtoupper($controller) . '_' . strtoupper($action);
     }
 }

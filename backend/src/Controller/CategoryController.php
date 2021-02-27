@@ -2,8 +2,9 @@
 
 include_once __DIR__ . "/Interface/ControllerInterface.php";
 include_once __DIR__ . "/../../../common/src/Model/Category.php";
+include_once __DIR__ . "/AbstractController.php";
 
-class CategoryController implements ControllerInterface
+class CategoryController  extends AbstractController
 {
 
     public function create()

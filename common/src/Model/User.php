@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__ . "/../Service/UserService.php";
 
-class User
+class  User
 {
 
     const ROLE_USER_VALUE = 'ROLE_USER';
@@ -174,8 +174,7 @@ class User
                 '" . $this->getPhone() . "', 
                 '" . $this->getEmail() . "', 
                 '" . $this->getPassword() . "', 
-                '" . ($this->getRoles()) . "')";
-//                '" . json_encode($this->getRoles()) . "')";
+                '" . json_encode($this->getRoles()) . "')";
         }
 
         $result = mysqli_query($this->conn, $query);
@@ -208,4 +207,34 @@ class User
         return reset($one);
     }
 
+    /**
+     * @param array $roles
+     * @param $controller
+     * @param $action
+     * @return bool
+     * @throws Exception
+     */
+    public function isAccess($roles, $controller, $action)
+    {
+        $permission = SecurityService::getPermissionNameByControllerAndAction($controller, $action);
+
+        $query = "select * from `rbac_access` 
+            where role in ('" . implode("','", $roles) . "') and permission = '$permission'";
+
+
+        $result = mysqli_query($this->conn, $query);
+
+        if (!$result) {
+            throw new Exception('Permission Error', 400);
+        }
+
+        $accesses = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        foreach ($accesses as $access) {
+            if ($access) {
+                return true;
+            }
+        }
+        throw new Exception('Not Permission', 403);
+    }
 }

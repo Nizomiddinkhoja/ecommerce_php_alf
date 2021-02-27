@@ -7,10 +7,8 @@ class SiteController
 {
     public function index()
     {
-        $currentUser = UserService::getCurrentUser();
-
-        $all_result = (new Product())->all();
-        include_once __DIR__ . "/../../views/site/index.php";
+        header("Location: ?model=product&action=read");
+        die();
     }
 
     public function login()

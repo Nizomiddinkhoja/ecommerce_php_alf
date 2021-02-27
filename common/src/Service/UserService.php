@@ -3,7 +3,7 @@
 class UserService
 {
 
-    public function getCurrentUser()
+    public static function getCurrentUser()
     {
         $user = $_SESSION['current_user'] ?? null;
         return !empty($user) ? unserialize($user) : [];

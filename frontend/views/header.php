@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__ . "/../../common/src/Service/UserService.php";
 
-$currentUser = (new UserService)->getCurrentUser();
+$currentUser = UserService::getCurrentUser();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@ $currentUser = (new UserService)->getCurrentUser();
             <div class="width1024">
                 <ul class="desktop-element">
                     <li><?= !empty($currentUser['login']) ?
-                            '<span style="color: #fff"> Hello, ' . (new UserService)->getCurrentUser()['login'] . '!</span>' :
+                            '<span style="color: #fff"> Hello, ' . UserService::getCurrentUser()['login'] . '!</span>' :
                             '<a href="/shop/frontend/index.php?model=register&action=form">Register</a>' ?></li>
                     <li><?= !empty($currentUser['login']) ?
                             '<a href="/shop/frontend/index.php?model=auth&action=logout">Sign out</a>' :

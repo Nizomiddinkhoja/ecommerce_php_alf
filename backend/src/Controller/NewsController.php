@@ -3,8 +3,9 @@
 include_once __DIR__ . "/Interface/ControllerInterface.php";
 include_once __DIR__ . "/../../../common/src/Model/News.php";
 include_once __DIR__ . "/../../../common/src/Service/FileUploader.php";
+include_once __DIR__ . "/AbstractController.php";
 
-class NewsController implements ControllerInterface
+class NewsController  extends AbstractController
 {
 
     public function create()

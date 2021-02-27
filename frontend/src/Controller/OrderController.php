@@ -33,7 +33,7 @@ class OrderController
         $phone = htmlspecialchars($_POST['phone']);
         $email = htmlspecialchars($_POST['email']);
 
-        $userId = (new UserService)->getCurrentUser()['id'] ?? 0;
+        $userId = UserService::getCurrentUser()['id'] ?? 0;
         $payment = (int)$_POST['payment'];
         $delivery = (int)$_POST['delivery'];
         $total = 0;

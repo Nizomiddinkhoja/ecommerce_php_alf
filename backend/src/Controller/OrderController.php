@@ -5,8 +5,9 @@ include_once __DIR__ . "/../../../common/src/Model/Order.php";
 include_once __DIR__ . "/../../../common/src/Model/Basket.php";
 include_once __DIR__ . "/../../../common/src/Model/OrderItems.php";
 include_once __DIR__ . "/../../../common/src/Service/OrderService.php";
+include_once __DIR__ . "/AbstractController.php";
 
-class OrderController implements ControllerInterface
+class OrderController  extends AbstractController
 {
 
     public function create()

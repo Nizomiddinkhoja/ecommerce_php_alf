@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bca9e157-b306-4ff4-80af-56565a0ff594" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_rbac_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_rbac_table_rollback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Controller/AbstractController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Controller/AccessController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Controller/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Controller/SiteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Migrations/202002271328_migration_add_rbac_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/views/access/form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/views/exceptions/400.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/views/site/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Model/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Model/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/ShopController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/Migrations/202002271059_migration_add_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Migrations/202002271059_migration_add_user_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/Service/SecurityService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/SecurityService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/Service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/basket/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/basket/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,15 +56,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/Command" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/src/Model" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Command" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Migrations" />
-      <recent name="C:\laragon\www\phpAlif\shop\frontend\views\register" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\views" />
+      <recent name="C:\laragon\www\phpAlif\shop\common\src\Model" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\views\access" />
       <recent name="C:\laragon\www\phpAlif\shop\backend\src\Controller" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\views" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\views\site" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\phpAlif\shop\frontend\css" />
@@ -101,7 +121,7 @@
       <workItem from="1614138615799" duration="7357000" />
       <workItem from="1614147192697" duration="49000" />
       <workItem from="1614229825798" duration="7635000" />
-      <workItem from="1614400930804" duration="12203000" />
+      <workItem from="1614400930804" duration="23334000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1613326122028</created>
@@ -145,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614407834421</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="some fix &amp; auth">
+      <created>1614413961626</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614413961626</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +187,8 @@
     <MESSAGE value="Before Basket CRUD" />
     <MESSAGE value="Before User register" />
     <MESSAGE value="Added Register" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Register" />
+    <MESSAGE value="some fix &amp; auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fix &amp; auth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614145066312">
@@ -179,10 +207,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="424" y="0" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614146224808" />
-    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1614407831770">
+    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1614413958829">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614407831770" />
+    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614413958829" />
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1610047034541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -192,10 +220,10 @@
     </state>
     <state x="526" y="195" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613238231446" />
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1609146163246" />
-    <state x="427" y="179" key="NewPhpClassDialog" timestamp="1614404563308">
+    <state x="427" y="179" key="NewPhpClassDialog" timestamp="1614418783061">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="427" y="179" key="NewPhpClassDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614404563308" />
+    <state x="427" y="179" key="NewPhpClassDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614418783061" />
     <state x="499" y="290" key="NewPhpFileDialog" timestamp="1614142840877">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -220,10 +248,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="324" y="95" width="700" height="530" key="recent.locations.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1609010266320" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1614412493544">
+    <state x="339" y="165" key="run.anything.popup" timestamp="1614424935970">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614412493544" />
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614424935970" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1614408172699">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

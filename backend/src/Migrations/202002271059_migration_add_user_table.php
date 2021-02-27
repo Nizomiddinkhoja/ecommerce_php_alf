@@ -30,7 +30,7 @@ class MigrationAddUserTable
         }
 
         $result = mysqli_query($this->conn, "INSERT INTO `user`(`id`, `name`, `phone`, `email`, `password`, `roles`) 
-        VALUES (null,'admin','+992919100333','nizomiddinkhoja@gmail.com','" . UserService::encodePassword('admin') . "'," . json_encode('ROLE_SUPER_ADMIN') . ")");
+        VALUES (null,'admin','+992919100333','nizomiddinkhoja@gmail.com','" . UserService::encodePassword('admin') . "','[\"'" . json_encode('ROLE_SUPER_ADMIN') . "'\"]')");
 
         if (!$result) {
             print mysqli_error($this->conn) . PHP_EOL;

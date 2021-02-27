@@ -1,5 +1,5 @@
 <?php
-
+include_once __DIR__ . "/../Service/UserService.php";
 
 class User
 {
@@ -136,7 +136,7 @@ class User
      */
     public function setPassword($password)
     {
-        $this->password = md5($password);
+        $this->password = UserService::encodePassword($password);
     }
 
     /**
@@ -164,7 +164,7 @@ class User
                             `phone`='" . $this->getPhone() . "',
                             `email`='" . $this->getEmail() . "',
                             `password`='" . $this->getPassword() . "',
-                            `roles`='" . json_encode($this->getRoles()) . "',
+                            `roles`='" . ($this->getRoles()) . "',
                             WHERE id = $this->id";
 
         } else {
@@ -174,7 +174,8 @@ class User
                 '" . $this->getPhone() . "', 
                 '" . $this->getEmail() . "', 
                 '" . $this->getPassword() . "', 
-                '" . json_encode($this->getRoles()) . "')";
+                '" . ($this->getRoles()) . "')";
+//                '" . json_encode($this->getRoles()) . "')";
         }
 
         $result = mysqli_query($this->conn, $query);
@@ -184,5 +185,27 @@ class User
         }
     }
 
+
+    public function getById($id)
+    {
+        $result = mysqli_query($this->conn, "select * from `user` where id = " . $id . " limit 1");
+        $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        return reset($one);
+    }
+
+    public function getByEmail($email)
+    {
+        $query = "select * from `user` where email = '" . $email . "'";
+        $result = mysqli_query($this->conn, $query);
+
+        if (!$result) {
+            throw new Exception('User not found', 404);
+        }
+
+        $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        return reset($one);
+    }
 
 }

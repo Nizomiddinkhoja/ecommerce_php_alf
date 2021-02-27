@@ -3,11 +3,18 @@
 
 class SecurityService
 {
-    public function checkPassword($login, $password)
+    public function checkPassword($user, $password)
     {
 
-        return true;
+        if (empty($user)) {
+            throw new Exception('User not found', 404);
+        }
 
+        if (UserService::encodePassword($password) !== $user['password']) {
+            throw new Exception('Incorrect password', 400);
+
+        }
+        return true;
     }
 
 

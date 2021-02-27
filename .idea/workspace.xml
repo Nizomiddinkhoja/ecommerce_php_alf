@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bca9e157-b306-4ff4-80af-56565a0ff594" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_user_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_user_table_rollback.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Migrations/202002271059_migration_add_user_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/Model/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/Controller/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/register/form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Shop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Migrations/202002271059_migration_add_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Migrations/202002271059_migration_add_user_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/Service/SecurityService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/SecurityService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/basket/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/basket/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +101,7 @@
       <workItem from="1614138615799" duration="7357000" />
       <workItem from="1614147192697" duration="49000" />
       <workItem from="1614229825798" duration="7635000" />
-      <workItem from="1614400930804" duration="6509000" />
+      <workItem from="1614400930804" duration="12203000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1613326122028</created>
@@ -140,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614403100913</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Register">
+      <created>1614407834421</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614407834421</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +159,8 @@
     <MESSAGE value="create order page" />
     <MESSAGE value="Before Basket CRUD" />
     <MESSAGE value="Before User register" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before User register" />
+    <MESSAGE value="Added Register" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Register" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614145066312">
@@ -173,10 +179,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="424" y="0" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614146224808" />
-    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1614403097672">
+    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1614407831770">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614403097672" />
+    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614407831770" />
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1610047034541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -198,29 +204,29 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610041197574" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1614403106266">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1614407836139">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614403106266" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614407836139" />
     <state x="1408" y="-13" width="1339" height="717" maximized="true" key="dock-window-1" timestamp="1610182352076">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
     <state x="1408" y="-13" width="1339" height="717" maximized="true" key="dock-window-1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610182352076" />
-    <state x="360" y="103" width="646" height="532" key="find.popup" timestamp="1614403246605">
+    <state x="360" y="103" width="646" height="532" key="find.popup" timestamp="1614412487212">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="360" y="103" width="646" height="532" key="find.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614403246605" />
+    <state x="360" y="103" width="646" height="532" key="find.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614412487212" />
     <state x="324" y="95" width="700" height="530" key="recent.locations.popup" timestamp="1609010266320">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="324" y="95" width="700" height="530" key="recent.locations.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1609010266320" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1614143111558">
+    <state x="339" y="165" key="run.anything.popup" timestamp="1614412493544">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614143111558" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1610171486359">
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614412493544" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1614408172699">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610171486359" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614408172699" />
   </component>
 </project>

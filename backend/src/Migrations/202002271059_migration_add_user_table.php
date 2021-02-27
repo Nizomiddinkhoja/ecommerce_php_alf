@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__ . "/../../../common/src/Service/DBConnector.php";
+include_once __DIR__ . "/../../../common/src/Service/UserService.php";
 include_once __DIR__ . "/../../../common/src/Model/User.php";
 
 class MigrationAddUserTable
@@ -28,9 +29,8 @@ class MigrationAddUserTable
             print mysqli_error($this->conn) . PHP_EOL;
         }
 
-        $result = mysqli_query($this->conn, "
-        INSERT INTO `user`(`id`, `name`, `phone`, `email`, `password`, `roles`) 
-        VALUES (null,'admin','+992919100333','nizomiddinkhoja@gmail.com','" . md5('admin') . "','" . (User::ROLE_SUPER_ADMIN_VALUE) . "')");
+        $result = mysqli_query($this->conn, "INSERT INTO `user`(`id`, `name`, `phone`, `email`, `password`, `roles`) 
+        VALUES (null,'admin','+992919100333','nizomiddinkhoja@gmail.com','" . UserService::encodePassword('admin') . "'," . json_encode('ROLE_SUPER_ADMIN') . ")");
 
         if (!$result) {
             print mysqli_error($this->conn) . PHP_EOL;

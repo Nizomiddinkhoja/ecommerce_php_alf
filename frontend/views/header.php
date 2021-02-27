@@ -1,3 +1,8 @@
+<?php
+include_once __DIR__ . "/../../common/src/Service/UserService.php";
+
+$currentUser = (new UserService)->getCurrentUser();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,17 +20,24 @@
         <div class="top">
             <div class="width1024">
                 <ul class="desktop-element">
-                    <li><a href="/shop/frontend/index.php?model=site&action=login">Sign in</a></li>
-                    <li><a href="/shop/frontend/index.php?model=register&action=form">Register</a></li>
-                    <li><a href="">Order Status</a></li>
+                    <li><?= !empty($currentUser['login']) ?
+                            '<span style="color: #fff"> Hello, ' . (new UserService)->getCurrentUser()['login'] . '!</span>' :
+                            '<a href="/shop/frontend/index.php?model=register&action=form">Register</a>' ?></li>
+                    <li><?= !empty($currentUser['login']) ?
+                            '<a href="/shop/frontend/index.php?model=auth&action=logout">Sign out</a>' :
+                            '<a href="/shop/frontend/index.php?model=site&action=login">Sign in</a>' ?>
+                    </li>
+                    <?= !empty($currentUser['login']) ?
+                        '<li><a href="/shop/frontend/index.php?model=basket&action=view">Basket</a></li>' : ''
+                    ?>
                     <li><a href="">Help</a></li>
                 </ul>
             </div>
             <div id="mobile-logo" class="mobile-element">BOOKS</div>
             <select id="top-link" onchange="document.location=this.value" class="mobile-element form-control">
                 <option disabled selected></option>
-                <option value="/shop/frontend/index.php?model=site&action=login">Sign in</option>
                 <option value="/shop/frontend/index.php?model=register&action=form">Register</option>
+                <option value="/shop/frontend/index.php?model=site&action=login">Sign in</option>
                 <option value="#order">Order Status</option>
                 <option value="#help">Help</option>
             </select>
@@ -33,7 +45,8 @@
         <div class="header-panel">
             <div class="width1024 flex">
                 <div id="logo">
-                    <a href="/shop/frontend/index.php?model=product&action=all"><img src="/shop/frontend/imgs/logo.png" alt=""></a>
+                    <a href="/shop/frontend/index.php?model=product&action=all"><img src="/shop/frontend/imgs/logo.png"
+                                                                                     alt=""></a>
                 </div>
                 <div class="search-field">
                     <form action="#">

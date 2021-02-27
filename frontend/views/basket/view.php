@@ -56,7 +56,7 @@
             </tbody>
         </table>
 
-        <a href="index.php?model=order&action=index">Create Order</a>
+        <a href="index.php?model=order&action=index" id="btn-create-order">Create Order</a>
         
     </div>
 </div>

@@ -137,6 +137,32 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a href="http://phpalif.test/shop/backend/index.php?model=news&action=read"
+                           class="nav-link">
+                            <i class="nav-icon fas fa-table"></i>
+                            <p>
+                                Orders
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="http://phpalif.test/shop/backend/index.php?model=order&action=create"
+                                   class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Create order</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://phpalif.test/shop/backend/index.php?model=order&action=read"
+                                   class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>List orders</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

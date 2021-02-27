@@ -329,6 +329,27 @@ class Order
         return reset($result)['last_id'] ?? null;
     }
 
+    public function update()
+    {
+        $query = "UPDATE `orders` SET 
+             total = '$this->total', 
+             payment_id = '$this->paymentId',
+             delivery_id = '$this->deliveryId', 
+             name ='$this->name',
+             phone = '$this->phone',
+             email= '$this->email',
+             status = '$this->status',  
+             updated = '$this->updated' WHERE id = '$this->id' limit 1";
+
+        $result = mysqli_query($this->conn, $query);
+
+        if (!$result) {
+            throw new Exception(mysqli_error($this->conn));
+        }
+
+        return true;
+    }
+
     public function getFromDB()
     {
         $oneProductResult = mysqli_query($this->conn, "select * from orders where user_id = " . $this->userId . " limit 1");
@@ -336,8 +357,23 @@ class Order
         return reset($one);
     }
 
+    public function all()
+    {
+        $result = mysqli_query($this->conn, "select * from orders");
+
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    }
+
+    public function getById($id)
+    {
+        $result = mysqli_query($this->conn, "select * from orders where id = " . $id . " limit 1");
+        $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return reset($one);
+    }
+
 //    public function deleteUserById($userId)
 //    {
-//        mysqli_query($this->conn, "DELETE FROM orders WHERE user_id=$userId limit 1");
+//        mysqli_query($this->conn, "DELETE FROM orders WHERE user_id = $userId limit 1");
 //    }
 }

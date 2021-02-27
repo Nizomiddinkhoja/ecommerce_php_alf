@@ -1,3 +1,4 @@
+</div>
 <footer>
     <nav class="width1024">
         <div class="categories-group">

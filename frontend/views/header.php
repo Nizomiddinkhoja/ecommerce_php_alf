@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/shop/frontend/css/styles.css">
+    <link rel="stylesheet" href="/shop/frontend/css/shop-style.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <div class="top">
             <div class="width1024">
                 <ul class="desktop-element">
-                    <li><a href="">Sign in</a></li>
+                    <li><a href="/shop/frontend/index.php?model=site&action=login">Sign in</a></li>
                     <li><a href="">My account</a></li>
                     <li><a href="">Order Status</a></li>
                     <li><a href="">Help</a></li>
@@ -32,7 +33,7 @@
         <div class="header-panel">
             <div class="width1024 flex">
                 <div id="logo">
-                    <a href="/"><img src="/shop/frontend/imgs/logo.png" alt=""></a>
+                    <a href="/shop/frontend/index.php?model=product&action=all"><img src="/shop/frontend/imgs/logo.png" alt=""></a>
                 </div>
                 <div class="search-field">
                     <form action="#">
@@ -77,3 +78,4 @@
         </select>
     </nav>
 </header>
+<div class="body">

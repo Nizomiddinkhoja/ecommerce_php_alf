@@ -6,9 +6,18 @@ class DBConnector
     private $connect;
     private static $instance;
 
-    private function __construct()
+    public function __construct(
+        $host = 'localhost',
+        $user = 'shop_user',
+        $password = 'shop_password',
+        $database = 'db_shop')
     {
-        $this->connect = mysqli_connect('localhost', 'shop_user', 'shop_password', 'db_shop');
+        $this->connect = mysqli_connect(
+            $host,
+            $user,
+            $password,
+            $database);
+
         mysqli_query($this->connect, "SET NAMES 'utf8'");
     }
 

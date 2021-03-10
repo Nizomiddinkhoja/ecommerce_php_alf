@@ -23,6 +23,13 @@ class OrderItems
         $this->quantity = $quantity;
     }
 
+    public function setConn($testConn)
+    {
+        $this->conn = $testConn;
+
+        return $this;
+    }
+
     public function save()
     {
 
@@ -34,6 +41,7 @@ class OrderItems
         if (!$result) {
             throw new Exception(mysqli_error($this->conn));
         }
+
     }
 
     public function update()

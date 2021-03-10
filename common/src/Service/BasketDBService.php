@@ -7,6 +7,13 @@ include_once __DIR__ . '/Interfaces/BasketInterface.php';
 
 class BasketDBService extends BasketService
 {
+    const  TEST_USER_ID = 1;
+    private $conn;
+
+    public function __construct($conn = null)
+    {
+        $this->conn = $conn;
+    }
 
     public static function getBasketByUserId($userId)
     {
@@ -41,16 +48,28 @@ class BasketDBService extends BasketService
 
     public function getBasketProducts($basketId)
     {
+
+        if (!empty($this->conn)) {
+            return (new BasketItems())->setConn($this->conn)->getByBasketId($basketId);
+        }
+
         return (new BasketItems())->getByBasketId($basketId);
     }
 
     public function clearBasket($basketId)
     {
+        if (!empty($this->conn)) {
+            (new BasketItems())->setConn($this->conn)->clearByBasketId($basketId);
+        }
         (new BasketItems())->clearByBasketId($basketId);
     }
 
     public function getBasketIdByUserId($userId)
     {
+        if (!empty($this->conn)) {
+            return self::TEST_USER_ID;
+        }
+
         return (new Basket($userId))->getFromDB()['id'];
     }
 }

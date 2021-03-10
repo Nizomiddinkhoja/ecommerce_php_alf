@@ -17,4 +17,18 @@ class OrderService
             self::STATUS_CANCELED => 'Canceled'
         ];
     }
+
+    public function calcTotal(array $quantityAndProducts)
+    {
+        $total = 0;
+
+        foreach ($quantityAndProducts as $item) {
+            $product = $item['product'];
+            $total += $item['quantity'] * $product->price;
+        }
+
+        var_dump($total);
+
+        return $total;
+    }
 }

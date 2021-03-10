@@ -14,11 +14,18 @@ class OrderController
      */
     private $basketService;
 
+    private $conn;
 
-    public function __construct()
+    public function __construct($conn = null)
     {
-        $this->basketService = new BasketDBService();
 //        $this->basketService = new BasketCookieService();
+
+        if (!empty($conn)) {
+            $this->conn = $conn;
+            $this->basketService = new BasketDBService($conn);
+        } else {
+            $this->basketService = new BasketDBService();
+        }
     }
 
     public function index()
@@ -54,6 +61,9 @@ class OrderController
             $status,
             $updated);
 
+        if (!empty($this->conn)) {
+            $order->setConn($this->conn);
+        }
 
         $orderId = $order->save();
 
@@ -71,6 +81,10 @@ class OrderController
 
         foreach ($items as $item) {
             $orderItem = new OrderItems($orderId, (int)$item['product_id'], (int)$item['quantity']);
+
+            if (!empty($this->conn)) {
+                $orderItem->setConn($this->conn);
+            }
             $orderItem->save();
         }
 

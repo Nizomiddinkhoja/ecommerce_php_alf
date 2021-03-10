@@ -1,5 +1,7 @@
 <?php
 include_once __DIR__ . "/../Service/DBConnector.php";
+include_once __DIR__ . "/../Model/Product.php";
+
 
 class Order
 {
@@ -254,6 +256,16 @@ class Order
         $this->email = $email;
     }
 
+    /**
+     * @param string $conn
+     */
+    public function setConn($conn)
+    {
+        $this->conn = $conn;
+
+        return $this;
+    }
+
 
     /**
      * @return false|string
@@ -376,4 +388,26 @@ class Order
 //    {
 //        mysqli_query($this->conn, "DELETE FROM orders WHERE user_id = $userId limit 1");
 //    }
+
+    public function getProductsAndQuantityByOrderId($order_id)
+    {
+        $products = [];
+
+        $query = "SELECT *
+        from order_item 
+        left join products on order_item.product_id = products.id
+        where order_id = " . $order_id;
+
+        $result = mysqli_query($this->conn, $query);
+
+        foreach (mysqli_fetch_all($result, MYSQLI_ASSOC) as $item) {
+            $products[] = [
+                'quantity' => $item['quantity'],
+                'product' => new Product($item['id'], $item['title'], $item['picture'], $item['preview'],
+                    $item['content'], $item['price'], $item['status'], $item['created'], $item['updated'])
+            ];
+        }
+        return $products;
+
+    }
 }

@@ -10,6 +10,8 @@ class BasketItems
 
     private $conn;
 
+    private $testConn;
+
     public function __construct(
         $basketId = null,
         $productId = null,
@@ -21,6 +23,13 @@ class BasketItems
         $this->basketId = $basketId;
         $this->productId = $productId;
         $this->quantity = $quantity;
+    }
+
+    public function setConn($testConn)
+    {
+        $this->conn = $testConn;
+
+        return $this;
     }
 
     public function save()

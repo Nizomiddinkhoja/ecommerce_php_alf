@@ -10,92 +10,92 @@ class Fixture03
         [
             'id' => 'null',
             'title' => '1',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
+            'content' => '1',
+            'created' => '2021-01-23 07:28:11',
+            'updated' => '2021-01-23 07:28:11',
             'picture' => '01.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'preview' => '1'
         ],
         [
             'id' => 'null',
             'title' => '2',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
+            'content' => '2',
+            'created' => '2021-01-23 07:28:12',
+            'updated' => '2021-01-23 07:28:12',
             'picture' => '02.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'preview' => '2'
         ],
         [
             'id' => 'null',
             'title' => '3',
-            'body' => 'wadqwd',
+            'content' => '3',
             'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
+            'updated' => '2021-01-23 07:28:13',
             'picture' => '03.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'preview' => '3'
         ],
         [
             'id' => 'null',
             'title' => '4',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
+            'content' => '4',
+            'created' => '2021-01-23 07:28:14',
+            'updated' => '2021-01-23 07:28:14',
             'picture' => '04.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'preview' => '4'
         ],
         [
             'id' => 'null',
             'title' => '5',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
+            'content' => '5',
+            'created' => '2021-01-23 07:28:15',
+            'updated' => '2021-01-23 07:28:15',
             'picture' => '05.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'preview' => '5'
         ],
         [
             'id' => 'null',
             'title' => '6',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
-            'picture' => '01.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'content' => '6',
+            'created' => '2021-01-23 07:28:16',
+            'updated' => '2021-01-23 07:28:16',
+            'picture' => '06.jpg',
+            'preview' => '6'
         ],
         [
             'id' => 'null',
             'title' => '7',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
-            'picture' => '02.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'content' => '7',
+            'created' => '2021-01-23 07:28:17',
+            'updated' => '2021-01-23 07:28:17',
+            'picture' => '07.jpg',
+            'preview' => '7'
         ],
         [
             'id' => 'null',
             'title' => '8',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
-            'picture' => '03.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'content' => '8',
+            'created' => '2021-01-23 07:28:18',
+            'updated' => '2021-01-23 07:28:18',
+            'picture' => '08.jpg',
+            'preview' => '8'
         ],
         [
             'id' => 'null',
             'title' => '9',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
-            'updated' => '2021-01-23 07:28:10',
-            'picture' => '04.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'content' => '9',
+            'created' => '2021-01-23 07:28:19',
+            'updated' => '2021-01-23 07:28:19',
+            'picture' => '09.jpg',
+            'preview' => '9'
         ],
         [
             'id' => 'null',
             'title' => '10',
-            'body' => 'wadqwd',
-            'created' => '2021-01-23 07:28:13',
+            'content' => '10',
+            'created' => '2021-01-23 07:28:10',
             'updated' => '2021-01-23 07:28:10',
-            'picture' => '05.jpg',
-            'preview' => 'Звезда — массивное самосветящееся небесное тело, с...'
+            'picture' => '10.jpg',
+            'preview' => '10'
         ]
     ];
 
@@ -110,18 +110,27 @@ class Fixture03
 
         foreach ($this->data as $news) {
 
-            copy(__DIR__ . "/../../fixture_pics/" . $news['picture'],
-                __DIR__ . "/../../../uploads/products/" . $news['picture']);
+            copy(__DIR__ . "/../../fixtures_pics/" . $news['picture'],
+                __DIR__ . "/../../../uploads/news/" . $news['picture']);
 
-            $result = mysqli_query($this->conn, "INSERT INTO news VALUES (
-            " . $news['id'] . ",
+            $query = "INSERT INTO `news`
+            (`id`, 
+            `title`, 
+            `content`, 
+            `created`, 
+            `updated`, 
+            `picture`, 
+            `preview`) VALUES (
+              " . $news['id'] . " ,
             '" . $news['title'] . "',
-            '" . $news['body'] . "',
+            '" . $news['content'] . "',
             '" . $news['created'] . "',
             '" . $news['updated'] . "',
             '" . $news['picture'] . "',
             '" . $news['preview'] . "'
-            )");
+            )";
+
+            $result = mysqli_query($this->conn, $query);
 
             if (!$result) {
                 print mysqli_error($this->conn) . PHP_EOL;

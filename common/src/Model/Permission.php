@@ -39,7 +39,7 @@ class Permission
 
     public function all()
     {
-        $permissions=[];
+        $permissions = [];
         $result = mysqli_query($this->conn, "SELECT * FROM rbac_permission order by id desc ");
 
         foreach (mysqli_fetch_all($result, MYSQLI_ASSOC) as $item) {
@@ -47,6 +47,17 @@ class Permission
         }
 
         return $permissions;
+    }
+
+    public function deleteByName($name)
+    {
+
+        $query = "DELETE FROM rbac_permission WHERE permission = '$name'";
+        $result = mysqli_query($this->conn, $query);
+
+        if (!$result) {
+            throw new Exception('Permission Error', 400);
+        }
     }
 
 }

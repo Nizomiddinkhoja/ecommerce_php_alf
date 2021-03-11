@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bca9e157-b306-4ff4-80af-56565a0ff594" name="Default Changelist" comment="lesson 24">
-      <change afterPath="$PROJECT_DIR$/backend/dist/css/shop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_test_orderService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_test_order_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Controller/PermissionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureBasket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureBasketItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureOrderItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureOrders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Test/AbstractTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Test/OrderControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Test/OrderServiceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/permission/form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/permission/list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views/site/menu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/Model/Access.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_category_group.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_category_group_rollback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_category_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureCategoryProduct.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/Migrations/2020032328_migration_add_category_group_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Service/CategoryService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/01.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/02.jpg" afterDir="false" />
@@ -28,20 +19,12 @@
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/08.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/09.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/09.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Command/command_fixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Command/command_fixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/AccessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/AccessController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Fixtures/Fixture01.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Fixtures/Fixture01.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Fixtures/Fixture03.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Fixtures/Fixture03.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/access/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/access/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/BasketItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/BasketItems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/OrderItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/OrderItems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/DBConnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/DBConnector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/OrderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/OrderService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/news/0da1ca7aee757e305cc0e563743c37088.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/news/20aea5375b34b7dac80ce70a4349cc218.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/news/25de4e2f12d09a1c854307dfad1e06a78.jpg" beforeDir="false" />
@@ -101,9 +84,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\phpAlif\shop\backend\src\Command" />
       <recent name="C:\laragon\www\phpAlif\shop\backend\src\Fixtures" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Migrations" />
       <recent name="C:\laragon\www\phpAlif\shop\backend\src\Test" />
       <recent name="C:\laragon\www\phpAlif\shop\backend\views" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\phpAlif\shop\frontend\css" />
@@ -112,6 +95,16 @@
       <recent name="C:\laragon\www\phpAlif\shop\backend\src" />
       <recent name="C:\laragon\www\phpAlif\shop\uploads\products" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/shop/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -166,7 +159,9 @@
       <workItem from="1615136367114" duration="5523000" />
       <workItem from="1615180059965" duration="12349000" />
       <workItem from="1615260364716" duration="8000" />
-      <workItem from="1615352479934" duration="5010000" />
+      <workItem from="1615352479934" duration="5896000" />
+      <workItem from="1615399553546" duration="6270000" />
+      <workItem from="1615482761618" duration="3082000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1613326122028</created>
@@ -231,11 +226,31 @@
       <option name="project" value="LOCAL" />
       <updated>1614436326607</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lesson 26">
+      <created>1615357779853</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1615357779853</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -249,7 +264,8 @@
     <MESSAGE value="some fix &amp; auth" />
     <MESSAGE value="added permission" />
     <MESSAGE value="lesson 24" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 24" />
+    <MESSAGE value="lesson 26" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 26" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#SQL_Dialects" timestamp="1615141598357">
@@ -272,35 +288,35 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="424" y="0" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614146224808" />
-    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1614437960295">
+    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1615357776554">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614437960295" />
+    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615357776554" />
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1610047034541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610047034541" />
-    <state x="526" y="195" key="FileChooserDialogImpl" timestamp="1613238231446">
+    <state x="526" y="195" key="FileChooserDialogImpl" timestamp="1615403255456">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="526" y="195" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1613238231446" />
+    <state x="526" y="195" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615403255456" />
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1609146163246" />
-    <state x="427" y="179" key="NewPhpClassDialog" timestamp="1615185638775">
+    <state x="427" y="179" key="NewPhpClassDialog" timestamp="1615403772070">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="427" y="179" key="NewPhpClassDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615185638775" />
-    <state x="499" y="290" key="NewPhpFileDialog" timestamp="1615136715315">
+    <state x="427" y="179" key="NewPhpClassDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615403772070" />
+    <state x="499" y="290" key="NewPhpFileDialog" timestamp="1615403760090">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="499" y="290" key="NewPhpFileDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615136715315" />
+    <state x="499" y="290" key="NewPhpFileDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615403760090" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1610041197574">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610041197574" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1614436330483">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1615357782959">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614436330483" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615357782959" />
     <state x="1393" y="-16" width="978" height="506" maximized="true" key="dock-window-1" timestamp="1614442967982">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
@@ -317,9 +333,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614424935970" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1614442508683">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1615403845483">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614442508683" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615403845483" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 <?php
 include_once __DIR__ . "/../../common/src/Service/UserService.php";
+include_once __DIR__ . "/../../common/src/Service/CategoryService.php";
 
 $currentUser = UserService::getCurrentUser();
 ?>
@@ -12,6 +13,12 @@ $currentUser = UserService::getCurrentUser();
     <title>Document</title>
     <link rel="stylesheet" href="/shop/frontend/css/styles.css">
     <link rel="stylesheet" href="/shop/frontend/css/shop-style.css">
+
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <script src="script/scripts.js"></script>
 </head>
 
 <body>
@@ -66,15 +73,9 @@ $currentUser = UserService::getCurrentUser();
     </div>
     <nav>
         <ul class="width1024 desktop-element">
-            <li><a href="">Computers</a></li>
-            <li><a href="">Cooking</a></li>
-            <li><a href="">Education</a></li>
-            <li><a href="">Fiction</a></li>
-            <li class="active"><a href="">Health</a></li>
-            <li><a href="">Mathematics</a></li>
-            <li><a href="">Medical</a></li>
-            <li><a href="">Reference</a></li>
-            <li><a href="">Science</a></li>
+            <?php foreach (CategoryService::getGenres() as $genre):?>
+                <li><a href="?model=product&action=all&category_id=<?= $genre['id'] ?>"><?=$genre['title']?></a></li>
+            <?php endforeach; ?>
         </ul>
 
         <select onchange="document.location=this.value" class="mobile-element">

@@ -4,14 +4,12 @@
 <div id="banner-container" class="width1024">
     <div id="slider">
         <div class="slides">
-            <div class="slide"><a href="#"><img src="/shop/frontend/imgs/banner1.jpg" alt=""></a></div>
-            <div class="slide"><a href="#"><img src="/shop/frontend/imgs/banner2.jpg" alt=""></a></div>
-            <div class="slide"><a href="#"><img src="/shop/frontend/imgs/banner2.jpg" alt=""></a></div>
+            <div class="slide"><a href="#"><img src="imgs/banner1.jpg" alt=""></a></div>
+            <div class="slide"><a href="#"><img src="imgs/banner2.jpg" alt=""></a></div>
+            <div class="slide"><a href="#"><img src="imgs/banner2.jpg" alt=""></a></div>
         </div>
-        <a href="#" class="banner-btn btn-left"><span></span><img src="/shop/frontend/imgs/banner_arrow_left.png"
-                                                                  alt=""></a>
-        <a href="#" class="banner-btn btn-right"><span></span><img src="/shop/frontend/imgs/banner_arrow_right.png"
-                                                                   alt=""></a>
+        <a href="#" class="banner-btn btn-left"><span></span><img src="imgs/banner_arrow_left.png" alt=""></a>
+        <a href="#" class="banner-btn btn-right"><span></span><img src="imgs/banner_arrow_right.png" alt=""></a>
 
     </div>
     <div id="rand-product-banner">

@@ -51,6 +51,49 @@ class Category
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 
+    public function getByGroupIds($groups = [])
+    {
+
+        $where = '';
+
+        if (!empty($groups)) {
+            $where = ' WHERE group_id IN (' . implode(',', $groups) . ')';
+        }
+
+        $result = mysqli_query($this->conn, "SELECT * FROM categories $where order by id desc ");
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
+    public function getGroupWithCategories($groups = [])
+    {
+        if (!empty($groups)) {
+            $where = ' WHERE group_id NOT IN (' . implode(',', $groups) . ')';
+        }
+
+        $result = mysqli_query($this->conn, "
+                SELECT 
+                categories.*,
+                cg.id as group_id,
+                cg.title as group_title
+                FROM 
+                categories 
+                left join category_group cg on group_id = cg.id
+                $where order by `prior` desc ");
+
+        $groups = [];
+
+        $categories = $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        if (!is_array($categories) && !empty($categories)) {
+            return [];
+        }
+
+        foreach ($categories as $item) {
+            $groups[$item['group_title']][] = $item;
+        }
+        return $groups;
+    }
+
     public function getById($id)
     {
         $oneResult = mysqli_query($this->conn, "select * from categories where id = $id limit 1");

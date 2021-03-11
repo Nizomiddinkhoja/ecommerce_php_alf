@@ -63,9 +63,18 @@ class Product
         $result = mysqli_query($this->conn, $query);
     }
 
-    public function all()
+    public function all($categoriesIds = [])
     {
-        $resultProducts = mysqli_query($this->conn, "SELECT * FROM products order by id desc ");
+        $where = (!empty($categoriesIds))
+            ? ' WHERE  cp.category_id IN (' . implode(',', $categoriesIds) . ')' : '';
+
+        $resultProducts = mysqli_query($this->conn, "
+                SELECT 
+                products.* 
+                FROM products 
+                left join category_product cp on products.id = cp.id
+                $where
+                order by id desc ");
         return mysqli_fetch_all($resultProducts, MYSQLI_ASSOC);
     }
 

@@ -8,7 +8,12 @@ class ProductController
     public function all()
     {
         $categories = isset($_GET['category_id']) ? explode(',', $_GET['category_id']) : [];
-        $all_result = (new Product())->all($categories);
+
+        $limit = intval($_GET['limit'] ?? Product::NUMBER_PRODUCT_PER_PAGE);
+        $offset =  (intval($_GET['page'] ?? 1) - 1) * $limit ;
+        $offset = $offset < 0 ? 0 : $offset;
+
+        $all_result = (new Product())->all($categories, $limit, $offset);
         include_once __DIR__ . "/../../views/product/list.php";
     }
 

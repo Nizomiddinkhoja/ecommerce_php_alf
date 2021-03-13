@@ -1,5 +1,7 @@
-
 <?php include_once __DIR__ . "/../header.php" ?>
+
+<script src="script/comments.js"></script>
+
 <div id="breadcrumbs" class="width1024">
     <ul>
         <li><a href="#">Home</a></li>
@@ -28,7 +30,7 @@
                             <div class="statistics">Was $200 Save $20</div>
                             <form action="/shop/frontend/index.php?model=basket&action=addProduct" method="post">
                                 <input type="hidden" name="quantity" value="1">
-                                <input type="hidden" name="product_id" value="<?=$product['id']?>">
+                                <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
                                 <button>Add to card</button>
                             </form>
                         </div>
@@ -62,35 +64,11 @@
                             </div>
 
                         </div>
-                        <div id="comments">
-                            <div class="comments-list">
-                                <h4>Comments</h4>
-                                <div class="comment">
-                                    <div class="user-info">
-                                        <div><img src="/shop/frontend/imgs/avatar.png" alt=""></div>
-                                        <div class="username">Username 1</div>
-                                    </div>
-                                    <div class="text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-                                        ullam soluta cum? Delectus ipsa saepe numquam dignissimos consectetur
-                                        aliquam aut, voluptas cupiditate fuga ducimus tenetur repudiandae quos,
-                                        doloribus atque quidem.
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="user-info">
-                                        <div><img src="/shop/frontend/imgs/avatar.png" alt=""></div>
-                                        <div class="username">Username 1</div>
-                                    </div>
-                                    <div class="text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-                                        ullam soluta cum? Delectus ipsa saepe numquam dignissimos consectetur
-                                        aliquam aut, voluptas cupiditate fuga ducimus tenetur repudiandae quos,
-                                        doloribus atque quidem.
-                                    </div>
-                                </div>
-                            </div>
-                            <form action="#">
+                        <div class="comments-list">
+                            <h4>Comments</h4>
+                            <div id="comments"></div>
+                            <form id="comment-form" action="#">
+                                <input type="hidden" name="product_id" value="<?= $_GET['id'] ?? '' ?>">
                                 <h4>Write a comment</h4>
                                 <div>
                                     <label>Your name</label>
@@ -102,7 +80,7 @@
                                 </div>
                                 <div>
                                     <label>Message</label>
-                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    <textarea name="message" cols="30" rows="10"></textarea>
                                 </div>
                                 <div>
                                     <button>Submit</button>

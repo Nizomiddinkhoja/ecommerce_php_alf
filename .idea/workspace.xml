@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bca9e157-b306-4ff4-80af-56565a0ff594" name="Default Changelist" comment="lesson 24">
-      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_category_group.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_category_group_rollback.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Command/command_add_category_product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Fixtures/FixtureCategoryProduct.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Migrations/2020032328_migration_add_category_group_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/Service/CategoryService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Model/Comments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/script/comments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Controller/CommentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/01.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/02.jpg" afterDir="false" />
@@ -19,12 +16,10 @@
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/08.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/09.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/09.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/fixture_pics/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/product/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/product/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/product/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/product/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/news/0da1ca7aee757e305cc0e563743c37088.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/news/20aea5375b34b7dac80ce70a4349cc218.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/news/25de4e2f12d09a1c854307dfad1e06a78.jpg" beforeDir="false" />
@@ -60,6 +55,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -77,23 +73,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/Command" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/Controller" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Command" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Fixtures" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Migrations" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Test" />
-      <recent name="C:\laragon\www\phpAlif\shop\backend\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\phpAlif\shop\frontend\css" />
       <recent name="C:\laragon\www\phpAlif\shop\frontend" />
       <recent name="C:\laragon\www\phpAlif\shop\backend\src\Fixtures" />
       <recent name="C:\laragon\www\phpAlif\shop\backend\src" />
       <recent name="C:\laragon\www\phpAlif\shop\uploads\products" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\phpAlif\shop\frontend\src\Controller" />
+      <recent name="C:\laragon\www\phpAlif\shop\common\src\Model" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Command" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Fixtures" />
+      <recent name="C:\laragon\www\phpAlif\shop\backend\src\Migrations" />
     </key>
   </component>
   <component name="RunManager">
@@ -161,7 +157,9 @@
       <workItem from="1615260364716" duration="8000" />
       <workItem from="1615352479934" duration="5896000" />
       <workItem from="1615399553546" duration="6270000" />
-      <workItem from="1615482761618" duration="3082000" />
+      <workItem from="1615482761618" duration="3847000" />
+      <workItem from="1615518512185" duration="61000" />
+      <workItem from="1615607558797" duration="13783000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1613326122028</created>
@@ -233,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615357779853</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added category filter">
+      <created>1615485970034</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615485970034</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +270,8 @@
     <MESSAGE value="added permission" />
     <MESSAGE value="lesson 24" />
     <MESSAGE value="lesson 26" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 26" />
+    <MESSAGE value="added category filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="added category filter" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#SQL_Dialects" timestamp="1615141598357">
@@ -288,10 +294,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="424" y="0" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614146224808" />
-    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1615357776554">
+    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1615485965294">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615357776554" />
+    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615485965294" />
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1610047034541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -313,10 +319,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1610041197574" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1615357782959">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1615485992663">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615357782959" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615485992663" />
     <state x="1393" y="-16" width="978" height="506" maximized="true" key="dock-window-1" timestamp="1614442967982">
       <screen x="1366" y="0" width="1360" height="738" />
     </state>
@@ -329,13 +335,13 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="324" y="95" width="700" height="530" key="recent.locations.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1609010266320" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1614424935970">
+    <state x="339" y="165" key="run.anything.popup" timestamp="1615608482299">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1614424935970" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1615403845483">
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615608482299" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1615612912653">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615403845483" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1615612912653" />
   </component>
 </project>

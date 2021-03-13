@@ -3,6 +3,8 @@ include_once __DIR__ . "/../Service/DBConnector.php";
 
 class Product
 {
+    const NUMBER_PRODUCT_PER_PAGE = 20;
+
     public $id;
     public $title;
     public $picture;
@@ -63,19 +65,38 @@ class Product
         $result = mysqli_query($this->conn, $query);
     }
 
-    public function all($categoriesIds = [])
+    public function all($categoriesIds = [], $limit = self::NUMBER_PRODUCT_PER_PAGE, $offset = 0)
     {
         $where = (!empty($categoriesIds))
             ? ' WHERE  cp.category_id IN (' . implode(',', $categoriesIds) . ')' : '';
 
-        $resultProducts = mysqli_query($this->conn, "
+        $query = "
                 SELECT 
                 products.* 
                 FROM products 
                 left join category_product cp on products.id = cp.id
                 $where
-                order by id desc ");
+                order by id desc limit $offset, $limit";
+
+        $resultProducts = mysqli_query($this->conn, $query);
         return mysqli_fetch_all($resultProducts, MYSQLI_ASSOC);
+    }
+
+    public function getNumberPage($categoriesIds = [], $limit = self::NUMBER_PRODUCT_PER_PAGE)
+    {
+//        $where = (!empty($categoriesIds))
+//            ? ' WHERE  cp.category_id IN (' . implode(',', $categoriesIds) . ')' : '';
+
+        $query = "
+                SELECT 
+                COUNT(*)    
+                FROM products ";
+
+        $result = mysqli_query($this->conn, $query);
+        $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $number = reset($result);
+        $number = reset($number);
+        return floor($number / Product::NUMBER_PRODUCT_PER_PAGE);
     }
 
     public function getById($id)

@@ -13,6 +13,12 @@ class Product extends AbstractModel
      * @valid {"maxlength": 64}
      */
     public $title;
+
+
+    /**
+     * @var string
+     * @valid {"type": "string", "regx": "((.jpg)|(.png))"}
+     */
     public $picture;
 
     /**
@@ -24,14 +30,10 @@ class Product extends AbstractModel
 
     /**
      * @var null
-     * @valid {"type": "int", "max":300000}
+     * @valid {"type": "int", "max": 300000, "min": 1}
      */
     public $price;
 
-    /**
-     * @var null
-     * @valid {"type": "int"}
-     */
     public $status;
     public $created;
     public $updated;

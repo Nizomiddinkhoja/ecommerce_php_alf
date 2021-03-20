@@ -9,8 +9,10 @@ class Payment extends AbstractModel
      */
     private $id;
 
+
     /**
      * @var string
+     * @valid {"maxlength": 64}
      */
     private $title;
 

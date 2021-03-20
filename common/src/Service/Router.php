@@ -15,15 +15,17 @@ class Router
     public function index()
     {
         try {
+            $module = $_GET['module'] ?? '';
+            if (!empty($module)) $module = $module . '/';
             $model = $_GET['model'] ?? 'site';
             $model = htmlspecialchars($model);
             $model = ucfirst($model);
             $controller = $model . 'Controller';
 
-            if (!file_exists(__DIR__ . "/../../../" . $this->side . "/src/Controller/" . $controller . '.php')) {
+            if (!file_exists(__DIR__ . "/../../../" . $this->side . "/src/Controller/" . $module . $controller . '.php')) {
                 throw new Exception("Controller not found", 404);
             }
-            include_once __DIR__ . "/../../../" . $this->side . "/src/Controller/" . $controller . '.php';
+            include_once __DIR__ . "/../../../" . $this->side . "/src/Controller/" . $module . $controller . '.php';
 
             //CRUD
 

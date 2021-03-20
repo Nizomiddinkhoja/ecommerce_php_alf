@@ -103,6 +103,23 @@ class Product extends AbstractModel
         return mysqli_fetch_all($resultProducts, MYSQLI_ASSOC);
     }
 
+    public function getAllForExport($limit = null)
+    {
+        if ($limit > 0) {
+            $limit = 'LIMIT ' . $limit;
+        }
+
+
+        $query = "
+                SELECT 
+                products.* 
+                FROM products 
+                order by id asc $limit";
+
+        $result = mysqli_query($this->conn, $query);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
     public function getNumberPage($categoriesIds = [], $limit = self::NUMBER_PRODUCT_PER_PAGE)
     {
         $where = (!empty($categoriesIds) && is_array($categoriesIds))

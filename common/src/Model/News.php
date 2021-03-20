@@ -1,7 +1,8 @@
 <?php
 include_once __DIR__ . "/../Service/DBConnector.php";
+include_once __DIR__ . "/AbstractModel.php";
 
-class News
+class News extends AbstractModel
 {
     public $id;
     public $title;
@@ -10,8 +11,6 @@ class News
     public $updated;
     public $picture;
     public $preview;
-
-    private $conn;
 
     public function __construct(
         $id = null,
@@ -23,7 +22,7 @@ class News
         $preview = null
     )
     {
-        $this->conn = DBConnector::getInstance()->connect();
+        parent::__construct();
 
         $this->id = $id;
         $this->title = $title;

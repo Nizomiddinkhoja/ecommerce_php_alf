@@ -28,7 +28,7 @@ class BasketController
 //        $this->basketService = new BasketSessionService();
 //        $this->basketService = new BasketCookieService();
 
-        $this->items = $this->basketService->getBasketProducts((int)$this->basket['id']);
+        $this->items = BasketDBService::defineBasketDetails();
 
     }
 

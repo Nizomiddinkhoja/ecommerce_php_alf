@@ -1,19 +1,18 @@
 <?php
 include_once __DIR__ . "/../Service/DBConnector.php";
+include_once __DIR__ . "/AbstractModel.php";
 
-class Role
+class Role extends AbstractModel
 {
     public $id;
     public $role;
-
-    private $conn;
 
     public function __construct(
         $id = null,
         $role = null
     )
     {
-        $this->conn = DBConnector::getInstance()->connect();
+        parent::__construct();
 
         $this->id = $id;
         $this->role = $role;

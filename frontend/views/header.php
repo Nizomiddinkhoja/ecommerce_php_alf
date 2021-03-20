@@ -1,8 +1,11 @@
 <?php
 include_once __DIR__ . "/../../common/src/Service/UserService.php";
 include_once __DIR__ . "/../../common/src/Service/CategoryService.php";
+include_once __DIR__ . "/../../common/src/Service/BasketDBService.php";
+include_once __DIR__ . "/../../common/src/Service/ProductService.php";
 
 $currentUser = UserService::getCurrentUser();
+$basketDetail = (new ProductService())->getBasketItems(BasketDBService::defineBasketDetails());
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,8 +65,8 @@ $currentUser = UserService::getCurrentUser();
                     </form>
                 </div>
                 <div id="basket-container">
-                    <div>Your card <span>(2 items)</span></div>
-                    <div><b>$125.0</b><a href="#">Checkout</a></div>
+                    <div>Your card <span>(<?=sizeof($basketDetail['items']?? []) ?> items)</span></div>
+                    <div><b>$<?=$basketDetail['total']?? 0?></b><a href="#">Checkout</a></div>
                 </div>
                 <div id="favor">
                     <div>Wish list</div>
@@ -73,8 +76,8 @@ $currentUser = UserService::getCurrentUser();
     </div>
     <nav>
         <ul class="width1024 desktop-element">
-            <?php foreach (CategoryService::getGenres() as $genre):?>
-                <li><a href="?model=product&action=all&category_id=<?= $genre['id'] ?>"><?=$genre['title']?></a></li>
+            <?php foreach (CategoryService::getGenres() as $genre): ?>
+                <li><a href="?model=product&action=all&category_id=<?= $genre['id'] ?>"><?= $genre['title'] ?></a></li>
             <?php endforeach; ?>
         </ul>
 

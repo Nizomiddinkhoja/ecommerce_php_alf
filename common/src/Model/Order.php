@@ -1,9 +1,10 @@
 <?php
 include_once __DIR__ . "/../Service/DBConnector.php";
 include_once __DIR__ . "/../Model/Product.php";
+include_once __DIR__ . "/AbstractModel.php";
 
 
-class Order
+class Order extends AbstractModel
 {
     /**
      * @var int
@@ -54,7 +55,6 @@ class Order
      */
     private $updated;
 
-    private $conn;
 
     /**
      * Order constructor.
@@ -84,7 +84,7 @@ class Order
         $updated = null)
     {
 
-        $this->conn = DBConnector::getInstance()->connect();
+        parent::__construct();
 
         $this->id = $id;
         $this->userId = $userId;

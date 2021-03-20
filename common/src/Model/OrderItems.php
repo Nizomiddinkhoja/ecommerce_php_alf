@@ -1,14 +1,14 @@
 <?php
 include_once __DIR__ . "/../Service/DBConnector.php";
+include_once __DIR__ . "/AbstractModel.php";
 
-class OrderItems
+class OrderItems extends AbstractModel
 {
     public $id;
     public $orderId;
     public $productId;
     public $quantity;
 
-    private $conn;
 
     public function __construct(
         $orderId = null,
@@ -16,7 +16,7 @@ class OrderItems
         $quantity = null
     )
     {
-        $this->conn = DBConnector::getInstance()->connect();
+        parent::__construct();
 
         $this->orderId = $orderId;
         $this->productId = $productId;

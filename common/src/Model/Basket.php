@@ -1,18 +1,18 @@
 <?php
 include_once __DIR__ . "/../Service/DBConnector.php";
+include_once __DIR__ . "/AbstractModel.php";
 
-class Basket
+
+class Basket extends AbstractModel
 {
     public $id;
     public $userId;
     public $items = [];
 
-    private $conn;
 
     public function __construct($userId = null)
     {
-
-        $this->conn = DBConnector::getInstance()->connect();
+        parent::__construct();
 
 
 //        $this->id = $id;
@@ -34,7 +34,7 @@ class Basket
 
     public function getFromDB()
     {
-        $oneProductResult = mysqli_query($this->conn, "select * from basket where user_id = ". $this->userId. " limit 1");
+        $oneProductResult = mysqli_query($this->conn, "select * from basket where user_id = " . $this->userId . " limit 1");
         $one = mysqli_fetch_all($oneProductResult, MYSQLI_ASSOC);
         return reset($one);
     }

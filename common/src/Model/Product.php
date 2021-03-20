@@ -1,21 +1,41 @@
 <?php
 include_once __DIR__ . "/../Service/DBConnector.php";
+include_once __DIR__ . "/AbstractModel.php";
 
-class Product
+class Product extends AbstractModel
 {
     const NUMBER_PRODUCT_PER_PAGE = 20;
 
     public $id;
+
+    /**
+     * @var string
+     * @valid {"maxlength": 64}
+     */
     public $title;
     public $picture;
+
+    /**
+     * @var null
+     * @valid {"type": "string", "maxlength": 255}
+     */
     public $preview;
     public $content;
+
+    /**
+     * @var null
+     * @valid {"type": "int", "max":300000}
+     */
     public $price;
+
+    /**
+     * @var null
+     * @valid {"type": "int"}
+     */
     public $status;
     public $created;
     public $updated;
 
-    private $conn;
 
     public function __construct(
         $id = null,
@@ -29,8 +49,7 @@ class Product
         $updated = null
     )
     {
-
-        $this->conn = DBConnector::getInstance()->connect();
+        parent::__construct();
 
 
         $this->id = $id;
@@ -67,7 +86,7 @@ class Product
 
     public function all($categoriesIds = [], $limit = self::NUMBER_PRODUCT_PER_PAGE, $offset = 0)
     {
-        $where = (!empty($categoriesIds))
+        $where = (!empty($categoriesIds) && is_array($categoriesIds))
             ? ' WHERE  cp.category_id IN (' . implode(',', $categoriesIds) . ')' : '';
 
         $query = "
@@ -84,13 +103,10 @@ class Product
 
     public function getNumberPage($categoriesIds = [], $limit = self::NUMBER_PRODUCT_PER_PAGE)
     {
-//        $where = (!empty($categoriesIds))
-//            ? ' WHERE  cp.category_id IN (' . implode(',', $categoriesIds) . ')' : '';
+        $where = (!empty($categoriesIds) && is_array($categoriesIds))
+            ? ' WHERE  cp.category_id IN (' . implode(',', $categoriesIds) . ')' : '';
 
-        $query = "
-                SELECT 
-                COUNT(*)    
-                FROM products ";
+        $query = "SELECT COUNT(*) FROM products $where ";
 
         $result = mysqli_query($this->conn, $query);
         $result = mysqli_fetch_all($result, MYSQLI_ASSOC);

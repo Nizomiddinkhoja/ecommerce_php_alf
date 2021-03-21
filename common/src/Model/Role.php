@@ -39,7 +39,7 @@ class Role extends AbstractModel
     public function all()
     {
         $role=[];
-        $result = mysqli_query($this->conn, "SELECT * FROM rbac_role order by id desc ");
+        $result = mysqli_query($this->conn, "SELECT * FROM rbac_role ORDER BY  id DESC ");
 
         foreach (mysqli_fetch_all($result, MYSQLI_ASSOC) as $item) {
             $role[] = $item['role'];

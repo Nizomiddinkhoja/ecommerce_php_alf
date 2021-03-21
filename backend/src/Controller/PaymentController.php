@@ -46,7 +46,7 @@ class PaymentController extends AbstractController
     {
         if (!empty($_POST)) {
             $product = new Payment(
-                htmlspecialchars($_POST['id']),
+                intval($_POST['id']),
                 htmlspecialchars($_POST['title']),
                 htmlspecialchars($_POST['code']),
                 htmlspecialchars($_POST['priority'])

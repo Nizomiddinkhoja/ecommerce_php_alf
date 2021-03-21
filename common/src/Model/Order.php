@@ -364,14 +364,14 @@ class Order extends AbstractModel
 
     public function getFromDB()
     {
-        $oneProductResult = mysqli_query($this->conn, "select * from orders where user_id = " . $this->userId . " limit 1");
+        $oneProductResult = mysqli_query($this->conn, "SELECT * FROM orders WHERE user_id = " . $this->userId . " limit 1");
         $one = mysqli_fetch_all($oneProductResult, MYSQLI_ASSOC);
         return reset($one);
     }
 
     public function all()
     {
-        $result = mysqli_query($this->conn, "select * from orders");
+        $result = mysqli_query($this->conn, "SELECT * FROM orders");
 
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -379,15 +379,10 @@ class Order extends AbstractModel
 
     public function getById($id)
     {
-        $result = mysqli_query($this->conn, "select * from orders where id = " . $id . " limit 1");
+        $result = mysqli_query($this->conn, "SELECT * FROM orders WHERE id = " . $id . " limit 1");
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
         return reset($one);
     }
-
-//    public function deleteUserById($userId)
-//    {
-//        mysqli_query($this->conn, "DELETE FROM orders WHERE user_id = $userId limit 1");
-//    }
 
     public function getProductsAndQuantityByOrderId($order_id)
     {

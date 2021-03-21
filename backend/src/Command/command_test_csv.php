@@ -10,8 +10,8 @@ $array2x = array(
 
 $validator  = new DataHelper();
 //C:\files\some_file.csv
-$result = $validator->saveArrayToCsvFile($array2x, 'C:\laragon\www\phpAlif\shop\data\some_file.csv');
-$result = $validator->getArrayFromCsvFile('C:\laragon\www\phpAlif\shop\data\some_file.csv');
+$result = $validator->saveArrayToCsvFile($array2x,  __DIR__."/../../../data/some_file.csv");
+$result = $validator->getArrayFromCsvFile(__DIR__."/../../../data/some_file.csv");
 
-var_dump($result);
+print_r($result);
 die('ok');

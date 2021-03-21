@@ -18,8 +18,6 @@ class OrderController
 
     public function __construct($conn = null)
     {
-//        $this->basketService = new BasketCookieService();
-
         if (!empty($conn)) {
             $this->conn = $conn;
             $this->basketService = new BasketDBService($conn);

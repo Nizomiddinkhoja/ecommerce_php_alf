@@ -3,14 +3,10 @@ include_once __DIR__ . "/../header.php";
 ?>
 
 <div class="content-wrapper">
-
     <section class="content">
-
-
         <form class="form-horizontal" action="http://phpalif.test/shop/backend/index.php?model=news&action=save"
               method="post"
               enctype="multipart/form-data">
-
             <div class="card-body">
                 <h1>Create news</h1>
                 <input type="hidden" name="id" value="<?= $oneNews['id'] ?? '' ?>">

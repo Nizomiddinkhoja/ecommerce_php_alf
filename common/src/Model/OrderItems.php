@@ -64,7 +64,7 @@ class OrderItems extends AbstractModel
 
     public function getByBasketId($orderId)
     {
-        $result = mysqli_query($this->conn, "select * from order_item where order_id = $orderId");
+        $result = mysqli_query($this->conn, "SELECT * FROM order_item WHERE order_id = $orderId");
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         return $item;

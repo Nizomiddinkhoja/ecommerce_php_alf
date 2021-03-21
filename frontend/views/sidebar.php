@@ -40,38 +40,5 @@
                 </ul>
             </div>
         <?php endforeach; ?>
-        <!--        <div class="categories-group">-->
-        <!--            <h4>Fiction & Literatures</h4>-->
-        <!--            <ul>-->
-        <!--                <li><a href="#">Chidren</a></li>-->
-        <!--                <li><a href="#">Science Fiction</a></li>-->
-        <!--                <li><a href="#">Fantasy</a></li>-->
-        <!--                <li><a href="#">Mystery</a></li>-->
-        <!--                <li><a href="#">Romance</a></li>-->
-        <!--                <li><a href="#">Horror</a></li>-->
-        <!--                <li><a href="#">Poetry</a></li>-->
-        <!--                <li><a href="#">Literature</a></li>-->
-        <!--            </ul>-->
-        <!--        </div>-->
-        <!--        <div class="categories-group">-->
-        <!--            <h4>Non - Fiction</h4>-->
-        <!--            <ul>-->
-        <!--                <li><a href="#">Chidren</a></li>-->
-        <!--                <li><a href="#">Science Fiction</a></li>-->
-        <!--                <li><a href="#">Fantasy</a></li>-->
-        <!--                <li><a href="#">Mystery</a></li>-->
-        <!--                <li><a href="#">Romance</a></li>-->
-        <!--                <li><a href="#">Horror</a></li>-->
-        <!--            </ul>-->
-        <!--        </div>-->
-        <!--        <div class="categories-group">-->
-        <!--            <h4>Other</h4>-->
-        <!--            <ul>-->
-        <!--                <li><a href="#">Chidren</a></li>-->
-        <!--                <li><a href="#">Science Fiction</a></li>-->
-        <!--                <li><a href="#">Fantasy</a></li>-->
-        <!--                <li><a href="#">Mystery</a></li>-->
-        <!--            </ul>-->
-        <!--        </div>-->
     </div>
 </div>

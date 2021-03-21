@@ -1,16 +1,13 @@
 <?php
 include_once __DIR__ . "/../header.php";
 ?>
-
 <div class="content-wrapper">
-
     <section class="content">
         <?php
         $errorMessage = MessageService::displayError();
         if (!empty($errorMessage)):?>
             <div class="error"><?= $errorMessage ?></div>
         <?php endif; ?>
-
         <form class="form-horizontal" action="http://phpalif.test/shop/backend/index.php?model=product&action=save"
               method="post"
               enctype="multipart/form-data">
@@ -79,7 +76,6 @@ include_once __DIR__ . "/../header.php";
                 </div>
             </div>
         </form>
-
     </section>
 </div>
 <?php

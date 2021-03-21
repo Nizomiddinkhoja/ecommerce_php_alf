@@ -55,7 +55,7 @@ class CategoryController  extends AbstractController
                 htmlspecialchars($_POST['prior'])
             );
 
-            $CategoryD->save();
+            $Category->save();
         }
         return $this->read();
     }

@@ -39,8 +39,6 @@ class ProductController
             include_once __DIR__ . "/../../views/product/view.php";
 
         } catch (Exception $e) {
-//            print $e->getMessage();
-
             ExceptionService::error($e, 'frontend');
         }
 

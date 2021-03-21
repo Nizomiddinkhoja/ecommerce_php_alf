@@ -1,15 +1,10 @@
 <?php
 include_once __DIR__ . "/../header.php";
 ?>
-
 <div class="content-wrapper">
-
     <section class="content">
-
-
         <form class="form-horizontal" action="?model=payment&action=save"
               method="post">
-
             <div class="card-body">
                 <h1>Create Payment</h1>
                 <input type="hidden" name="id" value="<?= $result['id'] ?? '' ?>">
@@ -33,13 +28,11 @@ include_once __DIR__ . "/../header.php";
                                class="form-control">
                     </div>
                 </div>
-
                 <div class="form-group  col-sm-6">
                     <input type="submit" value="Отправить" style="float: right" class="btn-lg btn-success">
                 </div>
             </div>
         </form>
-
     </section>
 </div>
 <?php

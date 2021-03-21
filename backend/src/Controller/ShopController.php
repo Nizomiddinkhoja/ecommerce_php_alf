@@ -48,7 +48,7 @@ class ShopController  extends AbstractController
         if (!empty($_POST)) {
 
             $shop = new Shop(
-                htmlspecialchars($_POST['id']),
+                intval($_POST['id']),
                 htmlspecialchars($_POST['title']),
                 htmlspecialchars($_POST['address']),
                 htmlspecialchars($_POST['city'])

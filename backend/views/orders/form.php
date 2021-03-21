@@ -1,7 +1,6 @@
 <?php
 include_once __DIR__ . "/../header.php";
 ?>
-
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
@@ -16,16 +15,12 @@ include_once __DIR__ . "/../header.php";
                     </ol>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
-
     <section class="content">
-
-
         <form class="form-horizontal" action="/shop/backend/index.php?model=order&action=update"
               method="post"
               enctype="multipart/form-data">
-
             <div class="card-body">
                 <h1>Create news</h1>
                 <input type="hidden" name="id" value="<?= $one['id'] ?? '' ?>">

@@ -5,11 +5,8 @@ include_once __DIR__ . "/../header.php";
 <div class="content-wrapper">
 
     <section class="content">
-
-
         <form class="form-horizontal" action="?model=delivery&action=save"
               method="post">
-
             <div class="card-body">
                 <h1>Create Delivery</h1>
                 <input type="hidden" name="id" value="<?= $result['id'] ?? '' ?>">

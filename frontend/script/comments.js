@@ -80,8 +80,4 @@ $(document).ready(function () {
         return false;
     })
 
-
-    // $("#comments .comment").each(function () {
-    //     console.log($(this).find('.text').text())
-    // })
 });

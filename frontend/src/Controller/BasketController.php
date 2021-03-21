@@ -21,7 +21,6 @@ class BasketController
 
         if (!isset($this->user['login'])) {
             return [];
-//            throw new Exception('No permissions', 403);
         }
 
         $this->basket = BasketDBService::getBasketByUserId($this->user['id']);

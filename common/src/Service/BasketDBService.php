@@ -82,9 +82,6 @@ class BasketDBService extends BasketService
         }
 
         $basket = BasketDBService::getBasketByUserId($user['id']);
-//        $this->basketService = new BasketDBService();
-//        $this->basketService = new BasketSessionService();
-//        $this->basketService = new BasketCookieService();
 
         return (new BasketDBService())->getBasketProducts((int)$basket['id']);
     }

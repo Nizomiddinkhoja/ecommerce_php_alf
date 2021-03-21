@@ -10,21 +10,12 @@ include_once __DIR__ . '/../Fixtures/FixtureOrders.php';
 
 class OrderServiceTest extends AbstractTest
 {
-//    public function __construct()
-//    {
-//        parent::copyTableByName('products');
-//        self::testCalcTotal();
-//    }
 
     public function testCalcTotal()
     {
         $this->createTableByName('products');
         $this->createTableByName('orders');
         $this->createTableByName('order_item');
-
-//        $this->copyTableByName('products');
-//        $this->copyTableByName('orders');
-//        $this->copyTableByName('order_item');
 
         $productFixture = (new Fixture01($this->conn));
         $productFixture->run();

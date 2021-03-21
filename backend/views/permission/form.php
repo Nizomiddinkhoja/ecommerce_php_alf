@@ -1,15 +1,10 @@
 <?php
 include_once __DIR__ . "/../header.php";
 ?>
-
 <div class="content-wrapper">
-
     <section class="content">
-
-
         <form class="form-horizontal" action="?model=permission&action=save"
               method="post" >
-
             <div class="card-body">
                 <h1>Create permission</h1>
                 <div class="form-group row">
@@ -26,7 +21,6 @@ include_once __DIR__ . "/../header.php";
                 </div>
             </div>
         </form>
-
     </section>
 </div>
 <?php

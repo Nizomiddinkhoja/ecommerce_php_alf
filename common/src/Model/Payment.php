@@ -130,13 +130,13 @@ class Payment extends AbstractModel
 
     public function all()
     {
-        $result = mysqli_query($this->conn, "SELECT * FROM payment order by id desc ");
+        $result = mysqli_query($this->conn, "SELECT * FROM payment ORDER BY id DESC ");
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 
     public function getById($id)
     {
-        $result = mysqli_query($this->conn, "select * from payment where id = $id");
+        $result = mysqli_query($this->conn, "SELECT * FROM payment WHERE id = $id");
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
         return reset($one);
     }

@@ -12,7 +12,7 @@ if (isset($_GET['delete'])) {
 if (isset($_GET['update'])) {
     $id = (int)$_GET['update'];
 
-    $oneCategoryResult = mysqli_query($conn, "select * from categories where id = $id limit 1");
+    $oneCategoryResult = mysqli_query($conn, "SELECT * FROM categories WHERE id = $id LIMIT 1");
     $oneCategory = mysqli_fetch_all($oneCategoryResult, MYSQLI_ASSOC);
     $oneCategory = reset($oneCategory);
 
@@ -40,7 +40,7 @@ if (!empty($_POST)) {
 
 }
 
-$resultCategory = mysqli_query($conn, "SELECT * FROM categories order by id desc ");
+$resultCategory = mysqli_query($conn, "SELECT * FROM categories ORDER BY id DESC ");
 
 $all_result = mysqli_fetch_all($resultCategory, MYSQLI_ASSOC);
 

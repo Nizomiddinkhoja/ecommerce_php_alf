@@ -34,10 +34,6 @@ class PermissionController extends AbstractController
 
             $product = new Permission(null, htmlspecialchars($_POST['permission']));
 
-//            var_dump($_POST['permission']);
-//
-//            die();
-
             $product->save();
         }
         return $this->read();

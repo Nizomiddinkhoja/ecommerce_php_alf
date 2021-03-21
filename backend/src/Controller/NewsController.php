@@ -54,7 +54,7 @@ class NewsController  extends AbstractController
 
 
             $product = new News(
-                htmlspecialchars($_POST['id']),
+                intval($_POST['id']),
                 htmlspecialchars($_POST['title']),
                 htmlspecialchars($_POST['content']),
                 $now,

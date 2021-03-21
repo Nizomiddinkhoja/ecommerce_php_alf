@@ -18,7 +18,6 @@ abstract class AbstractController implements ControllerInterface
 
         $model = htmlspecialchars($_GET['model']);
         $action = htmlspecialchars($_GET['action']);
-//        $permission = SecurityService::getPermissionNameByControllerAndAction($model, $action);
 
         (new User())->isAccess($currentUser['role'], $model, $action);
     }

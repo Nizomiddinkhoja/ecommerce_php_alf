@@ -135,7 +135,7 @@ class Delivery extends AbstractModel
 
     public function getById($id)
     {
-        $result = mysqli_query($this->conn, "select * from delivery where id = $id");
+        $result = mysqli_query($this->conn, "SELECT * FROM delivery WHERE id = $id");
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
         return reset($one);
     }

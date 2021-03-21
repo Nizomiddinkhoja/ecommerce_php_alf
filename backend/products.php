@@ -6,13 +6,13 @@ mysqli_query($conn, "SET NAMES 'utf8'");
 if (isset($_GET['delete'])) {
     $id = (int)$_GET['delete'];
 
-    mysqli_query($conn, "DELETE FROM products WHERE id=$id limit 1");
+    mysqli_query($conn, "DELETE FROM products WHERE id=$id LIMIT 1");
 }
 
 if (isset($_GET['update'])) {
     $id = (int)$_GET['update'];
 
-    $oneProductResult = mysqli_query($conn, "select * from products where id = $id limit 1");
+    $oneProductResult = mysqli_query($conn, "SELECT * FROM products WHERE id = $id LIMIT 1");
     $oneProduct = mysqli_fetch_all($oneProductResult, MYSQLI_ASSOC);
     $oneProduct = reset($oneProduct);
 
@@ -59,7 +59,7 @@ if (!empty($_POST)) {
 
 }
 
-$resultProducts = mysqli_query($conn, "SELECT * FROM products order by id desc ");
+$resultProducts = mysqli_query($conn, "SELECT * FROM products ORDER BY id DESC ");
 
 $all_result = mysqli_fetch_all($resultProducts, MYSQLI_ASSOC);
 

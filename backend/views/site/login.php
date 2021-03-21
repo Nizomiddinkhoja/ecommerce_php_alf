@@ -1,7 +1,6 @@
 <?php
 include_once __DIR__ . "/../header.php";
 ?>
-
 <style>
     #login-container{
         width: 300px;

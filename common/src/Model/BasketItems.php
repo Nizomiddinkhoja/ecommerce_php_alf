@@ -65,7 +65,7 @@ class BasketItems extends AbstractModel
 
     public function getByBasketId($basketId)
     {
-        $result = mysqli_query($this->conn, "select * from basket_item where basket_id = $basketId");
+        $result = mysqli_query($this->conn, "SELECT * FROM basket_item WHERE basket_id = $basketId");
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         return $item;

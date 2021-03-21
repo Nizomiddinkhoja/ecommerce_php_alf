@@ -46,7 +46,7 @@ class Category extends AbstractModel
 
     public function all()
     {
-        $result = mysqli_query($this->conn, "SELECT * FROM categories order by id desc ");
+        $result = mysqli_query($this->conn, "SELECT * FROM categories ORDER BY id DESC ");
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 
@@ -59,7 +59,7 @@ class Category extends AbstractModel
             $where = ' WHERE group_id IN (' . implode(',', $groups) . ')';
         }
 
-        $result = mysqli_query($this->conn, "SELECT * FROM categories $where order by id desc ");
+        $result = mysqli_query($this->conn, "SELECT * FROM categories $where ORDER BY id DESC ");
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 
@@ -76,8 +76,8 @@ class Category extends AbstractModel
                 cg.title as group_title
                 FROM 
                 categories 
-                left join category_group cg on group_id = cg.id
-                $where order by `prior` desc ");
+                LEFT JOIN category_group cg on group_id = cg.id
+                $where ORDER BY `prior` DESC ");
 
         $groups = [];
 
@@ -95,7 +95,7 @@ class Category extends AbstractModel
 
     public function getById($id)
     {
-        $oneResult = mysqli_query($this->conn, "select * from categories where id = $id limit 1");
+        $oneResult = mysqli_query($this->conn, "SELECT * FROM categories WHERE id = $id limit 1");
         $result = mysqli_fetch_all($oneResult, MYSQLI_ASSOC);
         return reset($result);
     }

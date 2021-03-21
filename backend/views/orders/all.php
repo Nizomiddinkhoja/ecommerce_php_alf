@@ -1,16 +1,12 @@
 <?php
-
 include_once __DIR__ . "/../header.php";
-
 ?>
 
 <h1>List News</h1>
-
 <div>
     <a class="btn btn-warning" href="http://phpalif.test/shop/backend/index.php?model=news&action=create">Добавить
         товар</a>
 </div>
-
 <table class="table">
     <thead>
     <th>ID</th>

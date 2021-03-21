@@ -23,7 +23,6 @@ class ExportService
 
     private function getData()
     {
-//        $products = (new Product())->all([], 27000);
         $products = (new Product())->getAllForExport();
 
         $list = [];

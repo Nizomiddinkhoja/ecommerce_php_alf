@@ -136,13 +136,13 @@ class Product extends AbstractModel
 
     public function getById($id)
     {
-        $oneProductResult = mysqli_query($this->conn, "select * from products where id = $id limit 1");
+        $oneProductResult = mysqli_query($this->conn, "SELECT * FROM products WHERE id = $id LIMIT 1");
         $oneProduct = mysqli_fetch_all($oneProductResult, MYSQLI_ASSOC);
         return reset($oneProduct);
     }
 
     public function delete($id)
     {
-        mysqli_query($this->conn, "DELETE FROM products WHERE id=$id limit 1");
+        mysqli_query($this->conn, "DELETE FROM products WHERE id=$id LIMIT 1");
     }
 }

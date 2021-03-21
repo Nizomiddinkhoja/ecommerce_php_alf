@@ -70,7 +70,7 @@ class Comments extends AbstractModel
 
     public function getByProductId($productId)
     {
-        $query = "select * from comments where product_id = $productId";
+        $query = "SELECT * FROM comments WHERE product_id = $productId";
         $result = mysqli_query($this->conn, $query);
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }

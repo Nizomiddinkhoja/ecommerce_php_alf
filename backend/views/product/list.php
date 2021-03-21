@@ -1,9 +1,7 @@
 <?php
 include_once __DIR__ . "/../header.php";
 ?>
-<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -17,13 +15,9 @@ include_once __DIR__ . "/../header.php";
                     </ol>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
-
-    <!-- Main content -->
     <section class="content">
-
-        <!-- Default box -->
         <div class="card">
             <div class="card-body p-0">
                 <table class="table table-striped projects">
@@ -64,17 +58,10 @@ include_once __DIR__ . "/../header.php";
                     <?php endforeach ?>
                     </tbody>
                 </table>
-
-
             </div>
-            <!-- /.card-body -->
         </div>
-        <!-- /.card -->
-
     </section>
-    <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
 <?php
 include_once __DIR__ . "/../footer.php";
 ?>

@@ -13,8 +13,6 @@ class ProductController
 
     public function index()
     {
-//        header("Content-Type: application/json");
-
         $all = (new Product())->getAllForExport(100);
 
         print json_encode($all);
@@ -24,7 +22,6 @@ class ProductController
 
     public function view()
     {
-
         $product = (new Product())->getById((int)$_GET['id']);
 
         print json_encode($product);
@@ -34,8 +31,6 @@ class ProductController
 
     public function create()
     {
-//        header("Content-Type: application/json");
-
         try {
             $data = $_POST;
             $product = new Product(
@@ -93,8 +88,6 @@ class ProductController
 
     public function delete()
     {
-//        header("Content-Type: application/json");
-
         try {
             $data = $_POST;
 

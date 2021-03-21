@@ -27,8 +27,6 @@ class OrderService
             $total += $item['quantity'] * $product->price;
         }
 
-        var_dump($total);
-
         return $total;
     }
 }

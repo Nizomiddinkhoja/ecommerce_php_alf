@@ -21,7 +21,7 @@ abstract class AbstractTest
     public function copyTableByName($name)
     {
         $query = "INSERT INTO " . self::DB_TEST_NAME . "." . $name
-            . " select * from " . self::DB_PRODUCT_NAME . "." . $name;
+            . " SELECT * FROM " . self::DB_PRODUCT_NAME . "." . $name;
 
         mysqli_query($this->conn->connect(), $query);
 
@@ -29,7 +29,7 @@ abstract class AbstractTest
 
     public function createTableByName($name)
     {
-        $query = "show create table " . self::DB_PRODUCT_NAME . "." . $name;
+        $query = "SHOW CREATE TABLE " . self::DB_PRODUCT_NAME . "." . $name;
 
         $result = mysqli_query($this->conn->connect(), $query);
 

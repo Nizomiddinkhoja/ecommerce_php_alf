@@ -187,7 +187,7 @@ class  User extends AbstractModel
 
     public function getById($id)
     {
-        $result = mysqli_query($this->conn, "select * from `user` where id = " . $id . " limit 1");
+        $result = mysqli_query($this->conn, "SELECT * FROM `user` WHERE id = " . $id . " LIMIT 1");
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         return reset($one);
@@ -195,7 +195,7 @@ class  User extends AbstractModel
 
     public function getByEmail($email)
     {
-        $query = "select * from `user` where email = '" . $email . "'";
+        $query = "SELECT * FROM `user` WHERE email = '" . $email . "'";
         $result = mysqli_query($this->conn, $query);
 
         if (!$result) {
@@ -218,8 +218,8 @@ class  User extends AbstractModel
     {
         $permission = SecurityService::getPermissionNameByControllerAndAction($controller, $action);
 
-        $query = "select * from `rbac_access` 
-            where role in ('" . implode("','", $roles) . "') and permission = '$permission'";
+        $query = "SELECT * FROM `rbac_access` 
+            WHERE role IN ('" . implode("','", $roles) . "') AND permission = '$permission'";
 
 
         $result = mysqli_query($this->conn, $query);

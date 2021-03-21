@@ -12,7 +12,7 @@ if (isset($_GET['delete'])) {
 if (isset($_GET['update'])) {
     $id = (int)$_GET['update'];
 
-    $oneShopsResult = mysqli_query($conn, "select * from shops where id = $id limit 1");
+    $oneShopsResult = mysqli_query($conn, "SELECT * FROM shops WHERE id = $id LIMIT 1");
     $oneShops = mysqli_fetch_all($oneShopsResult, MYSQLI_ASSOC);
     $oneShops = reset($oneShops);
 
@@ -37,7 +37,7 @@ if (!empty($_POST)) {
 
 }
 
-$resultCategory = mysqli_query($conn, "SELECT * FROM shops order by id desc ");
+$resultCategory = mysqli_query($conn, "SELECT * FROM shops ORDER BY id DESC ");
 
 $all_result = mysqli_fetch_all($resultCategory, MYSQLI_ASSOC);
 

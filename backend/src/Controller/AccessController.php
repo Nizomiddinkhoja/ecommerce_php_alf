@@ -42,7 +42,6 @@ class AccessController extends AbstractController
         if (!empty($_POST)) {
             if ((new Access())->clear()) {
                 if ((new Access())->createAll($_POST['access'] ?? [])) {
-
                     header("Location: ?model=access&action=update");
                     die();
                 }

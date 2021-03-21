@@ -47,19 +47,19 @@ class Shop extends AbstractModel
 
     public function all()
     {
-        $result = mysqli_query($this->conn, "SELECT * FROM shops order by id desc ");
+        $result = mysqli_query($this->conn, "SELECT * FROM shops ORDER BY id DESC ");
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 
     public function getById($id)
     {
-        $oneResult = mysqli_query($this->conn, "select * from shops where id = $id limit 1");
+        $oneResult = mysqli_query($this->conn, "SELECT * FROM shops WHERE id = $id LIMIT 1");
         $result = mysqli_fetch_all($oneResult, MYSQLI_ASSOC);
         return reset($result);
     }
 
     public function delete($id)
     {
-        mysqli_query($this->conn, "DELETE FROM shops WHERE id=$id limit 1");
+        mysqli_query($this->conn, "DELETE FROM shops WHERE id=$id LIMIT 1");
     }
 }

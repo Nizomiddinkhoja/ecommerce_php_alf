@@ -56,13 +56,13 @@ class News extends AbstractModel
 
     public function all()
     {
-        $resultProducts = mysqli_query($this->conn, "SELECT * FROM news order by id desc ");
+        $resultProducts = mysqli_query($this->conn, "SELECT * FROM news ORDER BY id DESC ");
         return mysqli_fetch_all($resultProducts, MYSQLI_ASSOC);
     }
 
     public function getById($id)
     {
-        $oneProductResult = mysqli_query($this->conn, "select * from news where id = $id limit 1");
+        $oneProductResult = mysqli_query($this->conn, "SELECT * FROM news WHERE id = $id limit 1");
         $oneProduct = mysqli_fetch_all($oneProductResult, MYSQLI_ASSOC);
         return reset($oneProduct);
     }

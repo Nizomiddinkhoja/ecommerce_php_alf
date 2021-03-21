@@ -1,0 +1,263 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div>
+    <button id="button_app_product" class="btn btn-success">add product</button>
+</div>
+<form id="product-form" class="product-add"
+      method="post"
+      enctype="multipart/form-data"
+      style="display: none">
+
+    <div class="card-body">
+        <h1>Create Products</h1>
+        <input type="hidden" name="id" value="">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-10">
+                <input type="text" name="title" value="" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Picture</label>
+            <div class="col-sm-10">
+                <input type="file" name="picture" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Preview</label>
+            <div class="col-sm-10">
+                <input type="text" name="preview" value=""
+                       class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Content</label>
+            <div class="col-sm-10">
+                    <textarea name="content" rows="7"
+                              class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+                <input type="number" name="price" value=""
+                       class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="status col-sm-2 col-form-label">Status </label>
+            <div class="col-sm-10">
+                <input type="checkbox" name="status" class="form-control">
+            </div>
+        </div>
+
+        <div style="display: flex">
+            <div class="form-group  col-sm-6">
+                <input type="submit" value="Отправить" data-toggle="modal" data-target="#myModal" style="float: right"
+                       class="btn-lg btn-success">
+            </div>
+        </div>
+    </div>
+</form>
+
+<div id="products">
+    <table style="width: 100%;" class="table">
+        <thead>
+        <th>id</th>
+        <th>picture</th>
+        <th>title</th>
+        <th>price</th>
+        <th>created</th>
+        <th>actions</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Product</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Product updated
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function setProductDataForm(id, title, preview, status, price, content) {
+
+        $("#product-form input[name='id']").val(id || '');
+        $("#product-form input[name='title']").val(title || '');
+        $("#product-form input[name='preview']").val(preview || '');
+        $("#product-form input[name='status']").val(status || '');
+        $("#product-form input[name='price']").val(price || '');
+        $("#product-form textarea[name='content']").val(content || '');
+
+    }
+
+    function displayForm() {
+        $("#product-form").show();
+        setProductDataForm();
+    }
+
+    $("#button_app_product").click(function () {
+        displayForm();
+    });
+
+    // http://phpalif.test/shop/frontend/index.php?module=api&model=product&action=index
+
+    $.ajax({
+        type: "GET",
+        url: 'http://phpalif.test/shop/frontend/index.php?module=api&model=product&action=index',
+        dataType: "json",
+        success: function (response) {
+            console.log(response);
+
+            for (let index in response) {
+                $("#products table tbody").append($(`<tr>
+                        <td>${response[index].id}</td>
+                        <td><img src="http://phpalif.test/shop/uploads/products/${response[index].picture}" width="200px" height="200px" alt=""> </td>
+                        <td>${response[index].title}</td>
+                        <td>${response[index].price}</td>
+                        <td>${response[index].created}</td>
+                        <td>
+                        <a data-id="${response[index].id}" class="product-delete btn btn-danger">delete</a>
+                        <a data-id="${response[index].id}" class="product-edit btn btn-warning">edit</a></td>
+                    </tr>`));
+            }
+        },
+        error: function (text) {
+            console.error(text);
+        }
+    });
+
+
+    $('form.product-add').submit(function () {
+        let data = {
+            id: $('input[name=id]').val(),
+            title: $('input[name=title]').val(),
+            preview: $('input[name=preview]').val(),
+            content: $('textarea[name=content]').val(),
+            picture: $('input[name=picture]').val(),
+            price: $('input[name=price]').val(),
+            status: 1
+        };
+
+
+        const operation = data.id > 0 ? 'update' : 'create';
+
+        $.ajax({
+            type: "POST",
+            url: 'http://phpalif.test/shop/frontend/index.php?module=api&model=product&action=' + operation,
+            data: data,
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+                setProductDataForm();
+            },
+            error: function (text) {
+                console.error(text);
+            }
+        });
+
+        return false;
+    });
+
+
+    $('#products table').on('click', '.product-edit', function () {
+
+        const _self = $(this);
+        const id = parseInt(_self.data('id'));
+
+        let data = {
+            id: parseInt(_self.data('id'))
+        };
+
+        // console.log(data);
+
+        $.ajax({
+            type: "GET",
+            url: 'http://phpalif.test/shop/frontend/index.php?module=api&model=product&action=view&id=' + id,
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+
+                setProductDataForm(
+                    parseInt(response.id),
+                    response.title,
+                    response.preview,
+                    response.status,
+                    response.price,
+                    response.content);
+
+
+                $("#product-form").show();
+            },
+            error: function (text) {
+                console.error(text);
+            }
+        });
+
+        return false;
+    });
+
+    $('#products table').on('click', '.product-delete', function () {
+
+        const _self = $(this);
+
+        let data = {
+            id: parseInt(_self.data('id'))
+        };
+
+        // console.log(data);
+
+        $.ajax({
+            type: "POST",
+            url: 'http://phpalif.test/shop/frontend/index.php?module=api&model=product&action=delete',
+            data: data,
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+
+                _self.parent().parent().remove();
+            },
+            error: function (text) {
+                console.error(text);
+            }
+        });
+
+        return false;
+    });
+</script>
+
+</body>
+</html>

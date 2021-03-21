@@ -4,19 +4,37 @@ include_once __DIR__ . "/../../../../common/src/Model/Product.php";
 
 class ProductController
 {
+
+    public function __construct()
+    {
+        header("Access-Control-Allow-Origin: *");
+        header("Content-Type: application/json");
+    }
+
     public function index()
     {
-        header("Content-Type: application/json");
-        $all = (new Product())->getAllForExport(10);
+//        header("Content-Type: application/json");
+
+        $all = (new Product())->getAllForExport(100);
 
         print json_encode($all);
         die();
 
     }
 
+    public function view()
+    {
+
+        $product = (new Product())->getById((int)$_GET['id']);
+
+        print json_encode($product);
+        die();
+
+    }
+
     public function create()
     {
-        header("Content-Type: application/json");
+//        header("Content-Type: application/json");
 
         try {
             $data = $_POST;
@@ -46,7 +64,6 @@ class ProductController
 
     public function update()
     {
-        header("Content-Type: application/json");
 
         try {
             $data = $_POST;
@@ -76,7 +93,7 @@ class ProductController
 
     public function delete()
     {
-        header("Content-Type: application/json");
+//        header("Content-Type: application/json");
 
         try {
             $data = $_POST;

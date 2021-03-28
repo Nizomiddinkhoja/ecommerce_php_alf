@@ -18,7 +18,7 @@ include_once __DIR__ . "/../../common/src/Service/SecurityService.php";
 
     <?php if (SecurityService::isAuthorized()) : ?>
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="../../index3.html" class="brand-link">
+            <a href="/shop/backend/index.php" class="brand-link">
                 <img src="/shop/backend/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                      class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">AdminLTE 3</span>

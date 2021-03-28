@@ -5,7 +5,8 @@ include_once __DIR__ . '/../Model/BasketItems.php';
 include_once __DIR__ . '/BasketService.php';
 include_once __DIR__ . '/Interfaces/BasketInterface.php';
 
-class BasketDBService extends BasketService
+class BasketDBService
+//class BasketDBService extends BasketService
 {
     const  TEST_USER_ID = 1;
     private $conn;

@@ -86,9 +86,22 @@ class OrderController
             $orderItem->save();
         }
 
+        $this->mail($email, 'Заказ принят!', "Ваш заказ принят! Ваш идентификатор = ".$orderId.
+            "\r\nЖдите наши модераторы позвонят вам!");
         $this->basketService->clearBasket($basketId);
 
         header("Location: /shop/frontend/index.php?model=order&action=success&order_id=" . $orderId);
+    }
+
+    public function mail($to_client, $subject_client, $message_client)
+    {
+        $to = $to_client;
+        $from = "nizomiddinkhoja99@gmail.com";
+        $subject = $subject_client;
+//        $subject = "=?utf-8?B?".base64_encode($subject)."?=";
+        $message = $message_client;
+        $headers = "From: $from\r\nReply-to: $from\r\nContent-type: text/plain; charset=utf-8\r\n";
+        mail($to, $subject, $message, $headers);
     }
 
 

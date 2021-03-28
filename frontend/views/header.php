@@ -59,8 +59,8 @@ $basketDetail = (new ProductService())->getBasketItems(BasketDBService::defineBa
                                                                                      alt=""></a>
                 </div>
                 <div class="search-field">
-                    <form action="#">
-                        <input type="text" name="search_text"/>
+                    <form action="?model=product&action=search" method="post">
+                        <input type="text" name="query"/>
                         <button>Search</button>
                     </form>
                 </div>

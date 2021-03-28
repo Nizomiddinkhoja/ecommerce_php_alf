@@ -45,5 +45,33 @@ class ProductController
 
     }
 
+    public function search()
+    {
+        try {
+
+            if (!isset($_POST['query'])) {
+                throw new Exception('query is not exists', 400);
+            }
+
+            $query = $_POST['query'];
+
+            if (empty($query)) {
+                throw new Exception('Undefined query', 400);
+            }
+            $all_result = (new Product())->search($query);
+
+
+            if (empty($all_result)) {
+                throw new Exception('Products not found', 404);
+            }
+
+            include_once __DIR__ . "/../../views/product/list.php";
+
+        } catch (Exception $e) {
+            ExceptionService::error($e, 'frontend');
+        }
+
+    }
+
 
 }

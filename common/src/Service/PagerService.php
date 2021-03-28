@@ -45,7 +45,7 @@ class PagerService
             foreach ($arNumbersPages as $numbersPage) {
                 print '
                             <div class="link-pager   '
-                    . (intval($_GET['page'] ?? 0) === $numbersPage ? ' active' : '') . ' ">
+                    . (intval($_GET['page'] ?? 1) === $numbersPage ? ' active' : '') . ' ">
                                 <a href="?model=product&action=all'
                     . (isset($_GET['category_id']) ? '&category_id=' . $_GET['category_id'] : '')
                     . '&page=' . $numbersPage . '">' . $numbersPage . '</a>

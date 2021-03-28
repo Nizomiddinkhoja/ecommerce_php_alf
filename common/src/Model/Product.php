@@ -141,6 +141,15 @@ class Product extends AbstractModel
         return reset($oneProduct);
     }
 
+    public function search($query)
+    {
+        $result = mysqli_query($this->conn, "SELECT * FROM `products` WHERE title LIKE '%" . $query . "%'");
+        $search = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        return $search;
+    }
+
+
     public function delete($id)
     {
         mysqli_query($this->conn, "DELETE FROM products WHERE id=$id LIMIT 1");
